@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cu5o7a6obttd2"
+path="res://.godot/imported/spaceship.webp-d1d4254c8928ea4d5a5e5b5a76de37a5.res"
+
+[deps]
+
+source_file="res://assets/spaceship.webp"
+dest_files=["res://.godot/imported/spaceship.webp-d1d4254c8928ea4d5a5e5b5a76de37a5.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

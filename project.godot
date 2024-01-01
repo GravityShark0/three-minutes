@@ -11,9 +11,19 @@ config_version=5
 [application]
 
 config/name="Three-minutes"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/size/mode=3
+window/size/resizable=false
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/default_filters/anisotropic_filtering_level=0

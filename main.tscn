@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2q8d16qp7iob"]
+
+[sub_resource type="TileSet" id="TileSet_jygus"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_jygus")
+format = 2
+
+[node name="Node2D" type="Node2D" parent="TileMap"]
