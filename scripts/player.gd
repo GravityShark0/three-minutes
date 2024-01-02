@@ -5,6 +5,7 @@ const SPEED: int = 200
 var can_laser: bool = true
 var can_grenade: bool = true
 var health: int = 3
+
 signal laser(pos, direction)
 signal grenade(pos, direction)
 
@@ -51,5 +52,19 @@ func _on_grenade_timer_timeout():
 	can_grenade = true
 
 
-func hit():
-	print("ive been hit")
+func hit(damage):
+	health -= damage
+	if health <= 0:
+		death()
+
+
+func death():
+	velocity = Vector2i.ZERO
+	$CollisionShape2D.queue_free()
+	$Sprite2D.queue_free()
+	$Timers.queue_free()
+	$Explode.emitting = true
+
+
+func _on_explode_finished():
+	queue_free()

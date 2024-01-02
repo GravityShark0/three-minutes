@@ -28,7 +28,7 @@ sources/0 = SubResource("TileSetAtlasSource_28dm0")
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_prli3"]
+[sub_resource type="CurveTexture" id="CurveTexture_3dof6"]
 curve = SubResource("Curve_apd75")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4rvk4"]
@@ -39,27 +39,27 @@ initial_velocity_max = 0.5
 gravity = Vector3(0, 0, 0)
 scale_min = 2.0
 scale_max = 2.0
-scale_curve = SubResource("CurveTexture_prli3")
+scale_curve = SubResource("CurveTexture_3dof6")
 color = Color(0.882353, 0.882353, 0.882353, 0.443137)
 
 [sub_resource type="Gradient" id="Gradient_re6qa"]
 offsets = PackedFloat32Array(0, 0.979487)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_51f46"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_icgag"]
 gradient = SubResource("Gradient_re6qa")
 
-[sub_resource type="CurveTexture" id="CurveTexture_mgesv"]
+[sub_resource type="CurveTexture" id="CurveTexture_ycf8l"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qa1ci"]
 particle_flag_disable_z = true
 radial_velocity_max = 30.0
-radial_velocity_curve = SubResource("CurveTexture_mgesv")
+radial_velocity_curve = SubResource("CurveTexture_ycf8l")
 gravity = Vector3(0, 0, 0)
 scale_min = 2.15
 scale_max = 2.15
 color = Color(1, 0.580392, 0, 1)
-color_ramp = SubResource("GradientTexture1D_51f46")
+color_ramp = SubResource("GradientTexture1D_icgag")
 
 [node name="Asteroid" type="Area2D"]
 script = ExtResource("1_muory")
