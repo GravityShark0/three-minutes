@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2q8d16qp7iob"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hm32l"]
-[ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://player.tscn" id="1_qyirn"]
-[ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://ui.tscn" id="2_ah4l3"]
+[ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://scenes/player.tscn" id="1_qyirn"]
+[ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://scenes/ui.tscn" id="2_ah4l3"]
 [ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/black.png" id="2_lovfw"]
 [ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars_tileset.webp" id="3_kfvfe"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="4_1cd62"]

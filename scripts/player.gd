@@ -52,25 +52,25 @@ func _process(_delta):
 	look_at(get_global_mouse_position())
 
 	if Input.is_action_pressed("primary") and can_laser:
-		var marker = $Lasers.get_children().pick_random()
 		can_laser = false
-		$Timers/LaserTimer.start()
-		var player_rotation = rotation_degrees
-		var player_direction = (
-			(get_global_mouse_position() - global_position).normalized()
-		)
-		$Effects/Shoot.emitting = true
-		laser.emit(marker.global_position, player_direction)
-	if Input.is_action_pressed("secondary") and can_grenade:
-		can_grenade = false
-		$Timers/GrenadeTimer.start()
+		$Timers/PrimaryTimer.start()
 
-		var marker = $Lasers.get_children().pick_random()
 		var player_direction = (
 			(get_global_mouse_position() - global_position).normalized()
 		)
 		$Effects/Shoot.emitting = true
-		grenade.emit(marker.global_position, player_direction)
+		laser.emit($LaserSourcePoint.global_position, player_direction)
+	# if Input.is_action_pressed("secondary") and can_grenade:
+	# 	can_grenade = false
+	# 	$Timers/GrenadeTimer.start()
+	#
+	# 	var marker = $Lasers.get_children().pick_random()
+	# 	var player_direction = (
+	# 		(get_global_mouse_position() - global_position).normalized()
+	# 	)
+	# 	$Effects/Shoot.emitting = true
+	# 	grenade.emit(marker.global_position, player_direction)
+	#
 
 
 func _on_laser_timer_timeout():
