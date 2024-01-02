@@ -1,12 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2q8d16qp7iob"]
+[gd_scene load_steps=9 format=3 uid="uid://d2q8d16qp7iob"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_hm32l"]
 [ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://player.tscn" id="1_qyirn"]
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_t6tqg"]
-[ext_resource type="PackedScene" uid="uid://cq5xjq42vqle1" path="res://asteroid.tscn" id="3_x4qfo"]
-[ext_resource type="PackedScene" uid="uid://c2jwl8uxq3s2p" path="res://wall.tscn" id="4_ddqyd"]
+[ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/black.png" id="2_lovfw"]
+[ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars_tileset.webp" id="3_kfvfe"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="4_1cd62"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw22w"]
+texture = ExtResource("2_lovfw")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g44k3"]
+texture = ExtResource("3_kfvfe")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kfhsf"]
+sources/0 = SubResource("TileSetAtlasSource_tw22w")
+sources/1 = SubResource("TileSetAtlasSource_g44k3")
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_t6tqg")
+position = Vector2(478, -195)
+script = ExtResource("1_hm32l")
+metadata/_edit_vertical_guides_ = [431.0]
+
+[node name="Background" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_kfhsf")
+format = 2
+layer_0/name = "black"
+layer_0/tile_data = PackedInt32Array(0, 0, 0)
+script = ExtResource("4_1cd62")
 
 [node name="Player" parent="." instance=ExtResource("1_qyirn")]
 unique_name_in_owner = true
@@ -14,22 +44,7 @@ position = Vector2(176.8, 85.4)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
-position_smoothing_speed = 11.935
-
-[node name="Asteroid" parent="." instance=ExtResource("3_x4qfo")]
-position = Vector2(50, 19.2)
-
-[node name="Asteroid2" parent="." instance=ExtResource("3_x4qfo")]
-position = Vector2(26.4, 96.2)
-
-[node name="Asteroid3" parent="." instance=ExtResource("3_x4qfo")]
-position = Vector2(58.8, 158.4)
-
-[node name="Asteroid4" parent="." instance=ExtResource("3_x4qfo")]
-position = Vector2(87.4, 62.4)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("4_ddqyd")]
-position = Vector2(220.2, -38)
+position_smoothing_speed = 15.0
 
 [node name="Projectiles" type="Node2D" parent="."]
 

@@ -18,7 +18,7 @@ texture = ExtResource("1_5spl4")
 [sub_resource type="TileSet" id="TileSet_nog64"]
 sources/0 = SubResource("TileSetAtlasSource_28dm0")
 
-[node name="Asteroid" type="CharacterBody2D"]
+[node name="Asteroid" type="Area2D"]
 script = ExtResource("1_muory")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,4 +28,5 @@ shape = SubResource("CircleShape2D_l2jqj")
 position = Vector2(-8, -8)
 tile_set = SubResource("TileSet_nog64")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 65536, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
