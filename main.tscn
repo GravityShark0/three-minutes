@@ -1,11 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2q8d16qp7iob"]
+[gd_scene load_steps=5 format=3 uid="uid://d2q8d16qp7iob"]
 
-[sub_resource type="TileSet" id="TileSet_jygus"]
+[ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://player.tscn" id="1_qyirn"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_t6tqg"]
+[ext_resource type="PackedScene" uid="uid://cq5xjq42vqle1" path="res://asteroid.tscn" id="3_x4qfo"]
+[ext_resource type="PackedScene" uid="uid://c2jwl8uxq3s2p" path="res://wall.tscn" id="4_ddqyd"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+script = ExtResource("1_t6tqg")
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_jygus")
-format = 2
+[node name="Player" parent="." instance=ExtResource("1_qyirn")]
+unique_name_in_owner = true
+position = Vector2(176.8, 85.4)
 
-[node name="Node2D" type="Node2D" parent="TileMap"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+position_smoothing_speed = 11.935
+
+[node name="Asteroid" parent="." instance=ExtResource("3_x4qfo")]
+position = Vector2(50, 19.2)
+
+[node name="Asteroid2" parent="." instance=ExtResource("3_x4qfo")]
+position = Vector2(26.4, 96.2)
+
+[node name="Asteroid3" parent="." instance=ExtResource("3_x4qfo")]
+position = Vector2(58.8, 158.4)
+
+[node name="Asteroid4" parent="." instance=ExtResource("3_x4qfo")]
+position = Vector2(87.4, 62.4)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("4_ddqyd")]
+position = Vector2(220.2, -38)
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
