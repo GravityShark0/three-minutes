@@ -24,7 +24,7 @@ func _on_player_grenade(pos, direction):
 
 
 func _process(_delta):
-	# var random_check = randi_range(0, 100)
+	# var random_check = randi_range(0, 100 * (difficulty * -1))
 	var random_check = 0
 	if random_check == 0:
 		var asteroid = asteroid_scene.instantiate() as Area2D

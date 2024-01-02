@@ -1,45 +1,50 @@
 extends Area2D
 
-var speed = randi_range(200, 500)
+var speed = randi_range(100, 150)
+var rotation_speed = randi_range(10, 180)
 var direction = Vector2.UP
+var damage = randi_range(1, 3)
 
 
 func _ready():
-	$TileMap.set_cell(
-		0, Vector2i(0, 0), 0, Vector2i(randi_range(0, 1), randi_range(0, 2))
+	$TileMap.set_layer_modulate(
+		0, Color(1, float(1) / damage, float(1) / damage, 1)
 	)
-	#
-	# match randi_range(0, 3):
-	# 	0:
-	# 		# Left
-	# 		var spawnpoint = Vector2(-425, randi_range(-325, 325))
-	# 		position = (%Player.spawnpoint + spawnpoint)
-	# 		direction = spawnpoint.normalized()
-	#
-	# 	1:
-	# 		# Right
-	# 		var spawnpoint = Vector2(425, randi_range(-325, 325))
-	# 		position = (%Player.spawnpoint + spawnpoint)
-	# 		direction = spawnpoint.normalized()
-	#
-	# 	2:
-	# 		# Top
-	# 		var spawnpoint = Vector2(-425, randi_range(-325, 325))
-	# 		position = (%Player.spawnpoint + spawnpoint)
-	# 		direction = spawnpoint.normalized()
-	#
-	# 	3:
-	# 		# Bottom
-	# 		var spawnpoint = Vector2(randi_range(-425, 425), -325)
-	# 		position = (%Player.spawnpoint + spawnpoint)
-	# 		direction = spawnpoint.normalized()
+	$TileMap.set_cell(
+		0, Vector2i(0, 0), 0, Vector2i(randi_range(0, 3), randi_range(0, 2))
+	)
 
 
 func _process(delta):
+	rotation_degrees += rotation_speed * delta
 	position += speed * direction * delta
 
 
 func _on_body_entered(body: Node2D):
 	if body != self:
-		body.free()
-		free()
+		if body.has_method("hit"):
+			body.hit(1)
+
+
+func _on_area_entered(area: Area2D):
+	if area != self:
+		if area.has_method("hit"):
+			area.hit(1)
+
+
+func hit(damage):
+	print(damage)
+	speed = 0
+	$CollisionShape2D.queue_free()
+	$TileMap.queue_free()
+	$AsteroidTimeout.queue_free()
+	$Trail.queue_free()
+	$Explode.emitting = true
+
+
+func _on_timer_timeout():
+	queue_free()
+
+
+func _on_explode_finished():
+	queue_free()

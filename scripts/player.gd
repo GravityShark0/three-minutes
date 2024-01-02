@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 const SLOW_SPEED: int = 100
-const SPEED: int = 250
+const SPEED: int = 200
 var can_laser: bool = true
 var can_grenade: bool = true
-
+var health: int = 3
 signal laser(pos, direction)
 signal grenade(pos, direction)
 
@@ -27,6 +27,7 @@ func _process(_delta):
 		var player_direction = (
 			(get_global_mouse_position() - global_position).normalized()
 		)
+		$Shoot.emitting = true
 		laser.emit(marker.global_position, player_direction)
 	if Input.is_action_pressed("secondary") and can_grenade:
 		can_grenade = false
@@ -36,6 +37,7 @@ func _process(_delta):
 		var player_direction = (
 			(get_global_mouse_position() - global_position).normalized()
 		)
+		$Shoot.emitting = true
 		grenade.emit(marker.global_position, player_direction)
 
 	move_and_slide()
@@ -47,3 +49,7 @@ func _on_laser_timer_timeout():
 
 func _on_grenade_timer_timeout():
 	can_grenade = true
+
+
+func hit():
+	print("ive been hit")

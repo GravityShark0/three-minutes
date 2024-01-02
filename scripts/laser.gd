@@ -8,7 +8,10 @@ func _process(delta):
 	position += direction * delta * speed
 
 
-func _on_body_entered(body: Node2D):
-	if body != self:
-		body.free()
-		free()
+func _on_laser_timeout_timeout():
+	queue_free()
+
+
+func hit(damage):
+	print("damaged")
+	queue_free()
