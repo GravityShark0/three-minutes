@@ -3,9 +3,9 @@ extends Node2D
 @export var difficulty: float = 1
 # const OUTWARD_LIMIT: int = Vector2(450, 350)
 
-var laser_scene: PackedScene = preload("res://laser.tscn")
-var grenade_scene: PackedScene = preload("res://grenade.tscn")
-var asteroid_scene: PackedScene = preload("res://asteroid.tscn")
+var laser_scene: PackedScene = preload("res://scenes/laser.tscn")
+var grenade_scene: PackedScene = preload("res://scenes/grenade.tscn")
+var asteroid_scene: PackedScene = preload("res://scenes/asteroid.tscn")
 
 
 func _on_player_laser(pos, direction):
