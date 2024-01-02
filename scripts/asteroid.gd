@@ -21,28 +21,26 @@ func _process(delta):
 
 
 func _on_body_entered(body: Node2D):
-	if body != self:
-		if body.has_method("hit"):
-			body.hit(rock_damage)
+	if body.has_method("hit"):
+		body.hit(rock_damage)
 
 
-# func _on_area_entered(area: Area2D):
-# 	if area != self:
-# 		if area.has_method("hit"):
-# 			area.hit(rock_damage)
+func _on_area_entered(area: Area2D):
+	if area.has_method("hit"):
+		area.hit(rock_damage)
 
 
 func hit(damage):
-	damage -= damage
-	if damage <= 0:
+	rock_damage = -damage
+	if rock_damage <= 0:
 		death()
 
 
 func death():
 	speed = 0
 	$CollisionShape2D.queue_free()
-	$Sprite2D.queue_free()
-	$LaserTimeout.queue_free()
+	$TileMap.queue_free()
+	$AsteroidTimeout.queue_free()
 	$Trail.queue_free()
 	$Explode.emitting = true
 

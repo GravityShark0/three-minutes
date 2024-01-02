@@ -23,7 +23,7 @@ gravity = Vector3(0, 0, 0)
 scale_min = 2.0
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_prli3")
-color = Color(0.882353, 0.882353, 0.882353, 0.443137)
+color = Color(1, 0, 0, 0.443137)
 
 [sub_resource type="Gradient" id="Gradient_wsbbt"]
 offsets = PackedFloat32Array(0, 0.979487)
@@ -64,6 +64,8 @@ autostart = true
 [node name="Trail" type="GPUParticles2D" parent="."]
 amount = 5
 process_material = SubResource("ParticleProcessMaterial_4u10b")
+lifetime = 1.5
+trail_enabled = true
 
 [node name="Explode" type="GPUParticles2D" parent="."]
 emitting = false

@@ -14,15 +14,14 @@ func _on_laser_timeout_timeout():
 
 
 func _on_body_entered(body: Node2D):
-	if body != self:
+	if not "player_health" in body:
 		if body.has_method("hit"):
 			body.hit(damage)
 
 
-# func _on_area_entered(area: Area2D):
-# 	if area != self:
-# 		if area.has_method("hit"):
-# 			area.hit(damage)
+func _on_area_entered(area: Area2D):
+	if area.has_method("hit"):
+		area.hit(damage)
 
 
 func hit(out_damage):

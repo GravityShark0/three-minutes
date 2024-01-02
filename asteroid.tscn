@@ -56,8 +56,8 @@ particle_flag_disable_z = true
 radial_velocity_max = 30.0
 radial_velocity_curve = SubResource("CurveTexture_ycf8l")
 gravity = Vector3(0, 0, 0)
-scale_min = 2.15
-scale_max = 2.15
+scale_min = 4.0
+scale_max = 4.0
 color = Color(1, 0.580392, 0, 1)
 color_ramp = SubResource("GradientTexture1D_icgag")
 
@@ -83,7 +83,7 @@ process_material = SubResource("ParticleProcessMaterial_4rvk4")
 
 [node name="Explode" type="GPUParticles2D" parent="."]
 emitting = false
-amount = 20
+amount = 30
 process_material = SubResource("ParticleProcessMaterial_qa1ci")
 lifetime = 2.0
 one_shot = true
