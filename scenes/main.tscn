@@ -15,7 +15,6 @@ metadata/_edit_vertical_guides_ = [431.0]
 [node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
 position = Vector2(4, -3)
 background_anchor_point = NodePath("../Player")
-starryness = 77.135
 
 [node name="Player" parent="." instance=ExtResource("1_qyirn")]
 unique_name_in_owner = true
@@ -33,5 +32,6 @@ wait_time = 180.0
 one_shot = true
 autostart = true
 
+[connection signal="after_death" from="Player" to="." method="_on_player_after_death"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
