@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duch4drp3gbmw"
-path="res://.godot/imported/laser.webp-90c3ab2f12cbaa2bd88e2c77dfad0195.ctex"
+uid="uid://dhwalnol3cfkn"
+path="res://.godot/imported/4SPACETILESET4.png-40a2d9dcf0d3e1cf82a91caeb80cd1d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/laser.webp"
-dest_files=["res://.godot/imported/laser.webp-90c3ab2f12cbaa2bd88e2c77dfad0195.ctex"]
+source_file="res://assets/stars/4SPACETILESET4.png"
+dest_files=["res://.godot/imported/4SPACETILESET4.png-40a2d9dcf0d3e1cf82a91caeb80cd1d7.ctex"]
 
 [params]
 

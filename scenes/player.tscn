@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://4w5ymnvc7j2c"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1hw1j"]
-[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/spaceship.webp" id="2_mr38i"]
+[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/splitted ffrom tilemap/spaceship.webp" id="2_mr38i"]
 [ext_resource type="PackedScene" uid="uid://dnmtvxqvfbikb" path="res://scenes/ship_effects.tscn" id="3_la8pf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mffd"]
