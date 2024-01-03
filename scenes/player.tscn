@@ -43,7 +43,7 @@ one_shot = true
 one_shot = true
 
 [node name="HitCooldown" type="Timer" parent="Timers"]
-wait_time = 0.3
+wait_time = 0.5
 one_shot = true
 
 [connection signal="after_explode" from="ShipEffects" to="." method="_on_ship_effects_after_explode"]
