@@ -22,9 +22,14 @@ func _process(_delta):
 
 	var direction = Input.get_vector("left", "right", "up", "down")
 
-	if Input.is_action_pressed("dash") and can_dash and velocity != Vector2(0, 0):
+	if (
+		Input.is_action_pressed("dash")
+		and can_dash
+		and velocity != Vector2(0, 0)
+	):
 		can_dash = false
 		dashing = true
+		$ShipEffects/Dash.rotation = direction.angle() - rotation
 		$ShipEffects/Dash.emitting = true
 		$Timers/DashTime.start()
 		$Timers/DashCooldown.start()
@@ -47,7 +52,9 @@ func _process(_delta):
 		can_laser = false
 		$Timers/PrimaryTimer.start()
 
-		var player_direction = (get_global_mouse_position() - global_position).normalized()
+		var player_direction = (
+			(get_global_mouse_position() - global_position).normalized()
+		)
 		$ShipEffects/Shoot.emitting = true
 		laser.emit($ShootPoint.global_position, player_direction)
 

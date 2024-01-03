@@ -13,12 +13,11 @@ metadata/_edit_vertical_guides_ = [431.0]
 [node name="UI" parent="." instance=ExtResource("2_ah4l3")]
 
 [node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
-position = Vector2(4, -3)
+position = Vector2(-3, -14)
 background_anchor_point = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("1_qyirn")]
 unique_name_in_owner = true
-position = Vector2(176.8, 85.4)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true

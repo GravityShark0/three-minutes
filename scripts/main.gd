@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var difficulty: float = 1
+@export var difficulty_increase: float = 0.001
 # const OUTWARD_LIMIT: int = Vector2(450, 350)
 
 var laser_scene: PackedScene = preload("res://scenes/laser.tscn")
@@ -24,6 +25,7 @@ func _on_player_grenade(pos, direction):
 
 
 func _process(_delta):
+	difficulty += difficulty_increase
 	var random_check = randi_range(0, int(50 / difficulty))
 	# var random_check = 0
 	if random_check == 0:
@@ -36,24 +38,32 @@ func _process(_delta):
 				var spawnpoint = Vector2(-425, randi_range(-325, 325))
 				asteroid.position = (%Player.position + spawnpoint)
 				# asteroid.direction = spawnpoint.normalized()
-				asteroid.direction = (Vector2.RIGHT + Vector2(0, randf_range(-1, 1)))
+				asteroid.direction = (
+					Vector2.RIGHT + Vector2(0, randf_range(-1, 1))
+				)
 			1:
 				# Right
 				var spawnpoint = Vector2(425, randi_range(-325, 325))
 				asteroid.position = (%Player.position + spawnpoint)
-				asteroid.direction = (Vector2.LEFT + Vector2(0, randf_range(-1, 1)))
+				asteroid.direction = (
+					Vector2.LEFT + Vector2(0, randf_range(-1, 1))
+				)
 
 			2:
 				# Top
 				var spawnpoint = Vector2(-425, randi_range(-325, 325))
 				asteroid.position = (%Player.position + spawnpoint)
-				asteroid.direction = (Vector2.DOWN + Vector2(randf_range(-1, 1), 0))
+				asteroid.direction = (
+					Vector2.DOWN + Vector2(randf_range(-1, 1), 0)
+				)
 
 			3:
 				# Bottom
 				var spawnpoint = Vector2(randi_range(-425, 425), -325)
 				asteroid.position = (%Player.position + spawnpoint)
-				asteroid.direction = (Vector2.UP + Vector2(randf_range(-1, 1), 0))
+				asteroid.direction = (
+					Vector2.UP + Vector2(randf_range(-1, 1), 0)
+				)
 
 
 func _on_player_after_death():
