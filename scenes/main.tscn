@@ -1,31 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2q8d16qp7iob"]
+[gd_scene load_steps=5 format=3 uid="uid://d2q8d16qp7iob"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hm32l"]
 [ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://scenes/player.tscn" id="1_qyirn"]
 [ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://scenes/ui.tscn" id="2_ah4l3"]
-[ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/black.png" id="2_lovfw"]
-[ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars_tileset.webp" id="3_kfvfe"]
-[ext_resource type="Script" path="res://scripts/background.gd" id="4_1cd62"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw22w"]
-texture = ExtResource("2_lovfw")
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g44k3"]
-texture = ExtResource("3_kfvfe")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_kfhsf"]
-sources/0 = SubResource("TileSetAtlasSource_tw22w")
-sources/1 = SubResource("TileSetAtlasSource_g44k3")
+[ext_resource type="PackedScene" uid="uid://cmi0br8uamtcw" path="res://scenes/background.tscn" id="3_71btw"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(478, -195)
@@ -34,12 +12,10 @@ metadata/_edit_vertical_guides_ = [431.0]
 
 [node name="UI" parent="." instance=ExtResource("2_ah4l3")]
 
-[node name="Background" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_kfhsf")
-format = 2
-layer_0/name = "black"
-layer_0/tile_data = PackedInt32Array(0, 0, 0)
-script = ExtResource("4_1cd62")
+[node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
+position = Vector2(4, -3)
+background_anchor_point = NodePath("../Player")
+starryness = 77.135
 
 [node name="Player" parent="." instance=ExtResource("1_qyirn")]
 unique_name_in_owner = true

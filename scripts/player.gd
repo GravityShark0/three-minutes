@@ -8,6 +8,7 @@ var dashing: bool = false
 var dash_multiplier: int = 500
 var can_dash: bool = true
 var player_health: int = 3
+var got_hit: bool = false
 
 
 signal laser(pos, direction)
@@ -65,11 +66,15 @@ func _on_laser_timer_timeout():
 
 
 func hit(damage):
-	if not dashing:
-		$ShipEffects/Hit.emitting = true
-		player_health -= damage
-		if player_health <= 0:
-			death()
+	if dashing or got_hit:
+		return
+		
+	got_hit = true
+	$Timers/HitCooldown.start()
+	$ShipEffects/Hit.emitting = true
+	player_health -= damage
+	if player_health <= 0:
+		death()
 
 
 func death():
@@ -86,7 +91,9 @@ func death():
 func _on_dash_time_timeout():
 	velocity = Vector2.ZERO
 	dashing = false
-
+	
+func _on_hit_cooldown_timeout():
+	got_hit = false
 
 func _on_dash_cooldown_timeout():
 	can_dash = true
@@ -94,3 +101,5 @@ func _on_dash_cooldown_timeout():
 
 func _on_ship_effects_after_explode():
 	queue_free()
+
+
