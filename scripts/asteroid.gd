@@ -25,6 +25,9 @@ func _process(delta):
 func _on_body_entered(body: Node2D):
 	if body.has_method("hit"):
 		body.hit(rock_damage)
+	elif body is Player:
+		body.hit(rock_damage)
+		hit(body.player_health)
 
 
 func _on_area_entered(area: Area2D):

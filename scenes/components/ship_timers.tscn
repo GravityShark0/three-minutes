@@ -6,7 +6,7 @@
 script = ExtResource("1_q0qce")
 
 [node name="Primary" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.5
 one_shot = true
 
 [node name="Special" type="Timer" parent="."]
@@ -17,6 +17,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="DashCool" type="Timer" parent="."]
+wait_time = 0.8
 one_shot = true
 
 [node name="HitLag" type="Timer" parent="."]

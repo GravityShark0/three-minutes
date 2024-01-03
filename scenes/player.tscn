@@ -3,12 +3,13 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1hw1j"]
 [ext_resource type="PackedScene" uid="uid://tmmd7lcqoful" path="res://scenes/components/ship_timers.tscn" id="3_0xmku"]
 [ext_resource type="PackedScene" uid="uid://dnmtvxqvfbikb" path="res://scenes/components/ship_effects.tscn" id="3_la8pf"]
-[ext_resource type="Texture2D" uid="uid://c0j5lc64cpro" path="res://assets/ship1.webp" id="3_nhc4g"]
+[ext_resource type="Texture2D" path="res://assets/ship1.webp" id="3_nhc4g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mffd"]
 radius = 6.0
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0, 1)
 motion_mode = 1
 script = ExtResource("1_1hw1j")
 
@@ -31,5 +32,6 @@ rotation = 1.5708
 [connection signal="after_explode" from="ShipEffects" to="." method="_on_ship_effects_after_explode"]
 [connection signal="dash_cooldown_timeout" from="ShipTimers" to="." method="_on_ship_timers_dash_cooldown_timeout"]
 [connection signal="dash_timeout" from="ShipTimers" to="." method="_on_ship_timers_dash_timeout"]
+[connection signal="hit_lag_timeout" from="ShipTimers" to="." method="_on_ship_timers_hit_lag_timeout"]
 [connection signal="primary_timeout" from="ShipTimers" to="." method="_on_ship_timers_primary_timeout"]
 [connection signal="special_timeout" from="ShipTimers" to="." method="_on_ship_timers_special_timeout"]
