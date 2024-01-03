@@ -24,10 +24,10 @@ texture = ExtResource("2_ktofy")
 sources/0 = SubResource("TileSetAtlasSource_tw22w")
 sources/1 = SubResource("TileSetAtlasSource_g44k3")
 
-[node name="Background" type="TileMap" node_paths=PackedStringArray("BackgroundAnchorPoint")]
+[node name="Background" type="TileMap"]
 tile_set = SubResource("TileSet_kfhsf")
 format = 2
 layer_0/name = "black"
 layer_0/tile_data = PackedInt32Array(0, 0, 0)
 script = ExtResource("3_cem7m")
-BackgroundAnchorPoint = NodePath("")
+one_shot = true
