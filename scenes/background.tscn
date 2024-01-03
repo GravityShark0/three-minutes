@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmi0br8uamtcw"]
+
+[ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="1_wx133"]
+[ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars/stars_tileset.webp" id="2_ktofy"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="3_cem7m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw22w"]
+texture = ExtResource("1_wx133")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g44k3"]
+texture = ExtResource("2_ktofy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kfhsf"]
+sources/0 = SubResource("TileSetAtlasSource_tw22w")
+sources/1 = SubResource("TileSetAtlasSource_g44k3")
+
+[node name="Background" type="TileMap" node_paths=PackedStringArray("BackgroundAnchorPoint")]
+tile_set = SubResource("TileSet_kfhsf")
+format = 2
+layer_0/name = "black"
+layer_0/tile_data = PackedInt32Array(0, 0, 0)
+script = ExtResource("3_cem7m")
+BackgroundAnchorPoint = NodePath("")
