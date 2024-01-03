@@ -1,11 +1,12 @@
 extends CharacterBody2D
+class_name Player
 
 const SLOW_PERCENT: int = 2
-const SPEED: int = 200
+@export var SPEED: int = 150
+@export var dash_multiplier: int = 300
 var can_laser: bool = true
 var can_grenade: bool = true
 var dashing: bool = false
-var dash_multiplier: int = 500
 var can_dash: bool = true
 var player_health: int = 3
 var got_hit: bool = false
@@ -92,15 +93,15 @@ func _on_ship_timers_primary_timeout():
 	can_laser = true
 
 
-func _on_ship_timers_invincibility_timeout():
-	got_hit = false
-
 
 func _on_ship_timers_dash_timeout():
 	$ShipTimers/DashCool.start()
-	velocity = Vector2.ZERO
 	dashing = false
 
 
 func _on_ship_timers_dash_cooldown_timeout():
 	can_dash = true
+
+
+func _on_ship_timers_hit_lag_timeout():
+	got_hit = false
