@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://dnmtvxqvfbikb"]
 
-[ext_resource type="Script" path="res://scripts/ship_effects.gd" id="1_8b73l"]
+[ext_resource type="Script" path="res://scripts/ship_effects.gd" id="1_kmoad"]
 
 [sub_resource type="Gradient" id="Gradient_3kioq"]
 offsets = PackedFloat32Array(0.00943396, 0.561321)
@@ -115,7 +115,7 @@ color = Color(1, 0, 0, 1)
 color_ramp = SubResource("GradientTexture1D_cv8es")
 
 [node name="ShipEffects" type="Node2D"]
-script = ExtResource("1_8b73l")
+script = ExtResource("1_kmoad")
 
 [node name="Dash" type="GPUParticles2D" parent="."]
 emitting = false

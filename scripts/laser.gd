@@ -2,7 +2,7 @@ extends Area2D
 
 @export var speed: int = 1000
 var direction: Vector2 = Vector2.UP
-var damage: int = 1
+var laser_damage: int = 1
 
 
 func _process(delta):
@@ -16,20 +16,19 @@ func _on_laser_timeout_timeout():
 func _on_body_entered(body: Node2D):
 	if not "player_health" in body:
 		if body.has_method("hit"):
-			body.hit(damage)
+			body.hit(laser_damage)
 
 
 func _on_area_entered(area: Area2D):
 	if area.has_method("hit"):
-		area.hit(damage)
+		area.hit(laser_damage)
 
 
-func hit(out_damage):
-	damage -= out_damage
+func hit(damage):
+	if laser_damage - damage <= 0:
+		return death()
 
-	if damage <= 0:
-		death()
-
+	laser_damage -= damage
 
 func death():
 	speed = 0

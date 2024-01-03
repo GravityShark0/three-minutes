@@ -13,6 +13,7 @@ config_version=5
 config/name="Three-minutes"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/show_image=false
 config/icon="res://assets/icon.svg"
 
 [debug]
@@ -25,6 +26,12 @@ window/size/viewport_width=400
 window/size/viewport_height=300
 window/size/resizable=false
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/crosshair.png"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/NotJamSciMono10/NotJamSciMono13.ttf"
+theme/default_font_antialiasing=2
 
 [input]
 
@@ -74,6 +81,10 @@ dash={
 , Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(304, 14),"global_position":Vector2(308, 55),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[physics]
+
+3d/default_gravity=0.0
 
 [rendering]
 

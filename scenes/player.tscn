@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://4w5ymnvc7j2c"]
+[gd_scene load_steps=6 format=3 uid="uid://4w5ymnvc7j2c"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1hw1j"]
-[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/spaceship.webp" id="2_mr38i"]
-[ext_resource type="PackedScene" uid="uid://dnmtvxqvfbikb" path="res://scenes/ship_effects.tscn" id="3_la8pf"]
+[ext_resource type="PackedScene" uid="uid://tmmd7lcqoful" path="res://scenes/components/ship_timers.tscn" id="3_0xmku"]
+[ext_resource type="PackedScene" uid="uid://dnmtvxqvfbikb" path="res://scenes/components/ship_effects.tscn" id="3_la8pf"]
+[ext_resource type="Texture2D" uid="uid://c0j5lc64cpro" path="res://assets/ship1.webp" id="3_nhc4g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5mffd"]
 radius = 6.0
@@ -16,7 +17,7 @@ script = ExtResource("1_1hw1j")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
 rotation = 1.5708
-texture = ExtResource("2_mr38i")
+texture = ExtResource("3_nhc4g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5mffd")
@@ -25,30 +26,10 @@ shape = SubResource("CircleShape2D_5mffd")
 position = Vector2(6, 0)
 rotation = 1.5708
 
-[node name="Timers" type="Node" parent="."]
-
-[node name="SpecialTimer" type="Timer" parent="Timers"]
-wait_time = 0.5
-one_shot = true
-
-[node name="PrimaryTimer" type="Timer" parent="Timers"]
-wait_time = 0.5
-one_shot = true
-
-[node name="DashTime" type="Timer" parent="Timers"]
-wait_time = 0.2
-one_shot = true
-
-[node name="DashCooldown" type="Timer" parent="Timers"]
-one_shot = true
-
-[node name="HitCooldown" type="Timer" parent="Timers"]
-wait_time = 0.5
-one_shot = true
+[node name="ShipTimers" parent="." instance=ExtResource("3_0xmku")]
 
 [connection signal="after_explode" from="ShipEffects" to="." method="_on_ship_effects_after_explode"]
-[connection signal="timeout" from="Timers/SpecialTimer" to="." method="_on_grenade_timer_timeout"]
-[connection signal="timeout" from="Timers/PrimaryTimer" to="." method="_on_laser_timer_timeout"]
-[connection signal="timeout" from="Timers/DashTime" to="." method="_on_dash_time_timeout"]
-[connection signal="timeout" from="Timers/DashCooldown" to="." method="_on_dash_cooldown_timeout"]
-[connection signal="timeout" from="Timers/HitCooldown" to="." method="_on_hit_cooldown_timeout"]
+[connection signal="dash_cooldown_timeout" from="ShipTimers" to="." method="_on_ship_timers_dash_cooldown_timeout"]
+[connection signal="dash_timeout" from="ShipTimers" to="." method="_on_ship_timers_dash_timeout"]
+[connection signal="primary_timeout" from="ShipTimers" to="." method="_on_ship_timers_primary_timeout"]
+[connection signal="special_timeout" from="ShipTimers" to="." method="_on_ship_timers_special_timeout"]
