@@ -92,6 +92,7 @@ func _on_ship_timers_special_timeout():
 	pass  # Replace with function body.
 func _on_ship_timers_hit_lag_timeout():
 	got_hit = false
+	visible = true
 func _on_ship_timers_dash_cooldown_timeout():
 	can_dash = true
 func _on_ship_timers_dash_timeout():
