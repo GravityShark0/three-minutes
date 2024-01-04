@@ -7,13 +7,10 @@ var rock_damage = randi_range(1, 3)
 
 
 func _ready():
-	$TileMap.set_cell(
-		0, Vector2i(0, 0), 0, Vector2i(randi_range(0, 3), randi_range(0, 2))
-	)
+	$Sprite2D.region_rect.position = Vector2(randi_range(0, 3) * 16, randi_range(0, 2) * 16)
 
-	$TileMap.set_layer_modulate(
-		0, Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
-	)
+	$Sprite2D.modulate = Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
+	
 
 
 func _process(delta):
@@ -41,16 +38,15 @@ func hit(damage):
 
 	rock_damage -= damage
 		
-	$TileMap.set_layer_modulate(
-		0, Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
-	)
+	$Sprite2D.modulate = Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
+	
 
 
 
 func death():
 	speed = 0
 	$CollisionShape2D.queue_free()
-	$TileMap.queue_free()
+	$Sprite2D.queue_free()
 	$AsteroidTimeout.queue_free()
 	$Trail.queue_free()
 	$Explode.emitting = true
