@@ -78,10 +78,11 @@ func death():
 	$Sprite2D.queue_free()
 	$ShipTimers.queue_free()
 	$ShipEffects/Explode.emitting = true
-	after_death.emit()
+
 
 
 func _on_ship_effects_after_explode():
+	after_death.emit()
 	queue_free()
 
 

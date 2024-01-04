@@ -14,11 +14,7 @@ config/name="Three-minutes"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/show_image=false
-config/icon="res://assets/icon.svg"
-
-[debug]
-
-settings/stdout/print_fps=true
+config/icon="res://assets/energyball3.webp"
 
 [display]
 
@@ -28,11 +24,15 @@ window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://assets/crosshair.png"
+mouse_cursor/custom_image_hotspot=Vector2(8, 8)
+mouse_cursor/tooltip_position_offset=Vector2(8, 8)
 
 [gui]
 
 theme/custom_font="res://assets/fonts/NotJamSciMono10/NotJamSciMono13.ttf"
-theme/default_font_antialiasing=2
+theme/default_font_antialiasing=0
+theme/default_font_hinting=0
+theme/default_font_subpixel_positioning=0
 
 [input]
 
@@ -86,6 +86,8 @@ dash={
 [physics]
 
 3d/default_gravity=0.0
+2d/default_gravity=0.0
+2d/default_gravity_vector=Vector2(0, 0)
 
 [rendering]
 
