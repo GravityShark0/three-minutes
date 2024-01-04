@@ -8,20 +8,15 @@ var laser_scene: PackedScene = preload("res://scenes/laser.tscn")
 var grenade_scene: PackedScene = preload("res://scenes/grenade.tscn")
 var asteroid_scene: PackedScene = preload("res://scenes/asteroid.tscn")
 
-
-func _on_player_laser(pos, direction):
-	var laser = laser_scene.instantiate() as Area2D
-	$Projectiles.add_child(laser)
-	laser.global_position = pos
-	laser.rotation = direction.angle()
-	laser.direction = direction
-
-
-func _on_player_grenade(pos, direction):
-	var grenade = grenade_scene.instantiate() as RigidBody2D
-	$Projectiles.add_child(grenade)
-	grenade.global_position = pos
-	grenade.linear_velocity = direction
+func _on_player_primary_fire(node, pos, direction):
+	if node is Player:
+		var laser = laser_scene.instantiate() as Area2D
+		$Projectiles.add_child(laser)
+		laser.global_position = pos
+		laser.rotation = direction.angle()
+		laser.direction = direction
+	else:
+		print('ass')
 
 
 func _process(_delta):
@@ -67,6 +62,8 @@ func _process(_delta):
 
 
 func _on_player_after_death():
-	$UI.queue_free()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	pass  # Replace with function body.
+
+
+

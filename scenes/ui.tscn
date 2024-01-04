@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bndu74dsmbmdb"]
+[gd_scene load_steps=7 format=3 uid="uid://bndu74dsmbmdb"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_b6mw5"]
+[ext_resource type="FontFile" uid="uid://stcbls5k34y3" path="res://assets/font/notjam/NotJamSciMono13.ttf" id="2_wcl2t"]
+[ext_resource type="FontFile" uid="uid://dtvxas5lqmnra" path="res://assets/font/mago/mago1.ttf" id="3_aksx2"]
 
 [sub_resource type="Animation" id="Animation_sviqy"]
 length = 0.001
@@ -59,11 +61,13 @@ scale = Vector2(1.04355, 1.04355)
 pivot_offset = Vector2(0, 24)
 size_flags_horizontal = 0
 size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_wcl2t")
 text = "Time Before Edjection:"
 
 [node name="Objectives" type="Label" parent="."]
 offset_right = 120.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_aksx2")
 text = "Tasks"
 
 [node name="DashCooldown" type="ProgressBar" parent="."]

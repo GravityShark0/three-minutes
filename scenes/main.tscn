@@ -33,6 +33,6 @@ wait_time = 180.0
 one_shot = true
 autostart = true
 
+[connection signal="dead" from="UI" to="UI" method="_on_dead"]
 [connection signal="after_death" from="Player" to="." method="_on_player_after_death"]
-[connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
-[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="primary_fire" from="Player" to="." method="_on_player_primary_fire"]

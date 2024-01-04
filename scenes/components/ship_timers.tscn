@@ -21,7 +21,6 @@ wait_time = 0.8
 one_shot = true
 
 [node name="HitLag" type="Timer" parent="."]
-wait_time = 0.5
 one_shot = true
 
 [connection signal="timeout" from="Primary" to="." method="_on_primary_timer_2_timeout"]

@@ -1,25 +1,22 @@
 extends Camera2D
 
+## Sets the radius of the square in pixels for the radius of when should the cursor go back go steady on the player
 @export var deadzone: int = 60
+
+## Sets how much will the cursor lean off to the sides
+@export var offset_multiplier: int = 240
 var viewport = get_viewport()
 
 func _process(_delta):
-	var deaderzone = deadzone
-	
-	# var mouse_pos = (get_viewport().get_mouse_position() - (get_viewport_rect().size / 2))
 	var middle = (get_viewport_rect().size / 2)
-	var minimum = middle - Vector2(deaderzone, deaderzone)
-	var maximum = middle + Vector2(deaderzone, deaderzone)
+	var deadzone_vector = Vector2(deadzone, deadzone)
+	var minimum = middle - deadzone_vector
+	var maximum = middle + deadzone_vector
 	var mouse_pos = (get_viewport().get_mouse_position())
 	
-	# print(mouse_pos, " ", middle, " ", min, " ", max)
-
-
 	if not(minimum.x < mouse_pos.x and mouse_pos.x < maximum.x and minimum.y < mouse_pos.y and mouse_pos.y < maximum.y):
-		print((mouse_pos - middle) / 60)
-		drag_horizontal_offset = (mouse_pos.x - middle.x) / 120
-		drag_vertical_offset = (mouse_pos.y - middle.y) / 120
-		print(drag_horizontal_offset, " ", drag_vertical_offset)
+		drag_horizontal_offset = (mouse_pos.x - middle.x) / offset_multiplier
+		drag_vertical_offset = (mouse_pos.y - middle.y) / offset_multiplier
 	else:
 		drag_horizontal_offset = 0
 		drag_vertical_offset = 0
