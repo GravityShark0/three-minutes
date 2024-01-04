@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://lgcdldwrisa2"]
 
 [ext_resource type="Script" path="res://scripts/laser.gd" id="1_h3ie4"]
-[ext_resource type="Texture2D" uid="uid://duch4drp3gbmw" path="res://assets/splitted ffrom tilemap/laser.webp" id="2_ctpau"]
+[ext_resource type="Texture2D" path="res://assets/laser.webp" id="2_ccmkj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d33hj"]
 radius = 2.66667
@@ -45,8 +45,10 @@ color = Color(1, 0.580392, 0, 1)
 color_ramp = SubResource("GradientTexture1D_7cl5r")
 
 [node name="Laser" type="Area2D"]
+position = Vector2(0, 11)
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_h3ie4")
+speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
@@ -54,7 +56,7 @@ shape = SubResource("CapsuleShape2D_d33hj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
-texture = ExtResource("2_ctpau")
+texture = ExtResource("2_ccmkj")
 
 [node name="LaserTimeout" type="Timer" parent="."]
 wait_time = 20.0

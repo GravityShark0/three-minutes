@@ -1,11 +1,12 @@
 extends CharacterBody2D
+class_name Player
 
 const SLOW_PERCENT: int = 2
-const SPEED: int = 200
+@export var SPEED: int = 150
+@export var dash_multiplier: int = 300
 var can_laser: bool = true
 var can_grenade: bool = true
 var dashing: bool = false
-var dash_multiplier: int = 500
 var can_dash: bool = true
 var player_health: int = 3
 var got_hit: bool = false
@@ -31,8 +32,7 @@ func _process(_delta):
 		dashing = true
 		$ShipEffects/Dash.rotation = direction.angle() - rotation
 		$ShipEffects/Dash.emitting = true
-		$Timers/DashTime.start()
-		$Timers/DashCooldown.start()
+		$ShipTimers/DashLength.start()
 		velocity = (direction * dash_multiplier)
 		return
 
@@ -50,7 +50,7 @@ func _process(_delta):
 
 	if Input.is_action_pressed("primary") and can_laser:
 		can_laser = false
-		$Timers/PrimaryTimer.start()
+		$ShipTimers/Primary.start()
 
 		var player_direction = (
 			(get_global_mouse_position() - global_position).normalized()
@@ -59,16 +59,12 @@ func _process(_delta):
 		laser.emit($ShootPoint.global_position, player_direction)
 
 
-func _on_laser_timer_timeout():
-	can_laser = true
-
-
 func hit(damage):
 	if dashing or got_hit:
 		return
 
 	got_hit = true
-	$Timers/HitCooldown.start()
+	$ShipTimers/HitLag.start()
 	$ShipEffects/Hit.emitting = true
 	player_health -= damage
 	if player_health <= 0:
@@ -80,23 +76,32 @@ func death():
 	dashing = true
 	$CollisionShape2D.queue_free()
 	$Sprite2D.queue_free()
-	$Timers.queue_free()
+	$ShipTimers.queue_free()
 	$ShipEffects/Explode.emitting = true
 	after_death.emit()
 
 
-func _on_dash_time_timeout():
-	velocity = Vector2.ZERO
+func _on_ship_effects_after_explode():
+	queue_free()
+
+
+func _on_ship_timers_special_timeout():
+	pass  # Replace with function body.
+
+
+func _on_ship_timers_primary_timeout():
+	can_laser = true
+
+
+
+func _on_ship_timers_dash_timeout():
+	$ShipTimers/DashCool.start()
 	dashing = false
 
 
-func _on_hit_cooldown_timeout():
-	got_hit = false
-
-
-func _on_dash_cooldown_timeout():
+func _on_ship_timers_dash_cooldown_timeout():
 	can_dash = true
 
 
-func _on_ship_effects_after_explode():
-	queue_free()
+func _on_ship_timers_hit_lag_timeout():
+	got_hit = false

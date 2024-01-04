@@ -11,12 +11,13 @@ func _ready():
 		0, Vector2i(0, 0), 0, Vector2i(randi_range(0, 3), randi_range(0, 2))
 	)
 
+	$TileMap.set_layer_modulate(
+		0, Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
+	)
+
 
 func _process(delta):
-	if speed != 0:
-		$TileMap.set_layer_modulate(
-			0, Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
-		)
+	if rock_damage > 0:
 		rotation_degrees += rotation_speed * delta
 		position += speed * direction * delta
 
@@ -24,6 +25,9 @@ func _process(delta):
 func _on_body_entered(body: Node2D):
 	if body.has_method("hit"):
 		body.hit(rock_damage)
+	elif body is Player:
+		body.hit(rock_damage)
+		hit(body.player_health)
 
 
 func _on_area_entered(area: Area2D):
@@ -32,9 +36,15 @@ func _on_area_entered(area: Area2D):
 
 
 func hit(damage):
-	rock_damage = -damage
-	if rock_damage <= 0:
-		death()
+	if rock_damage - damage <= 0:
+		return death()
+
+	rock_damage -= damage
+		
+	$TileMap.set_layer_modulate(
+		0, Color(1, float(1) / rock_damage, float(1) / rock_damage, 1)
+	)
+
 
 
 func death():
