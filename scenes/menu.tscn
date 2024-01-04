@@ -1,40 +1,40 @@
 [gd_scene load_steps=30 format=3 uid="uid://5dneig8ei6xs"]
 
-[ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="1_ag7af"]
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_d2odj"]
-[ext_resource type="Texture2D" uid="uid://dlo8budwurb2l" path="res://assets/stars/space18.png" id="2_dfpta"]
-[ext_resource type="Texture2D" uid="uid://dlymqfoneeg0" path="res://assets/stars/space22.png" id="3_wfjbu"]
-[ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars/stars_tileset.webp" id="4_du6ut"]
-[ext_resource type="Texture2D" uid="uid://m25rlxrddtii" path="res://assets/stars/2SPACETILESET2.png" id="5_knf3b"]
-[ext_resource type="Texture2D" uid="uid://c5m8gbofbgxgy" path="res://assets/stars/3SPACETILESET3.png" id="6_tae5p"]
-[ext_resource type="Texture2D" uid="uid://dhwalnol3cfkn" path="res://assets/stars/4SPACETILESET4.png" id="7_xovuv"]
-[ext_resource type="Texture2D" uid="uid://b8qh4u5bedogt" path="res://assets/stars/5SPACETILESET5.png" id="8_3gq8v"]
-[ext_resource type="FontFile" uid="uid://s0362j5y7c1h" path="res://assets/font/FutilePro.ttf" id="11_ltf35"]
-[ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="12_bi0vm"]
-[ext_resource type="Texture2D" uid="uid://fl5bckc5nsox" path="res://assets/button/border.png" id="12_qe7im"]
-[ext_resource type="Texture2D" uid="uid://t2jrn7hpo3o5" path="res://assets/splitted ffrom tilemap/spaceship1.png" id="13_2a00y"]
-[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/splitted ffrom tilemap/spaceship.webp" id="15_30rty"]
-[ext_resource type="Texture2D" uid="uid://copck0acvkpuo" path="res://assets/splitted ffrom tilemap/spaceship2.png" id="16_7y5xs"]
-[ext_resource type="FontFile" uid="uid://ds4r3eag6aco3" path="res://assets/font/NotJamSciMono10.ttf" id="16_dqxpe"]
-[ext_resource type="Texture2D" uid="uid://duch4drp3gbmw" path="res://assets/splitted ffrom tilemap/laser.webp" id="17_lugmr"]
-[ext_resource type="Texture2D" uid="uid://b4k3grarllryj" path="res://assets/splitted ffrom tilemap/asteroid12.png" id="18_fplji"]
-[ext_resource type="Texture2D" uid="uid://ci7mp77u4ndw1" path="res://assets/splitted ffrom tilemap/asteroid7.png" id="19_55dr1"]
-[ext_resource type="Texture2D" uid="uid://c1tw01kwn0naq" path="res://assets/splitted ffrom tilemap/asteroid1.png" id="20_4uf5o"]
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_fgewk"]
+[ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="2_sn7g7"]
+[ext_resource type="Texture2D" uid="uid://dlo8budwurb2l" path="res://assets/stars/space18.png" id="3_ljmsc"]
+[ext_resource type="Texture2D" uid="uid://dlymqfoneeg0" path="res://assets/stars/space22.png" id="4_26f0l"]
+[ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars/stars_tileset.webp" id="5_dwntc"]
+[ext_resource type="Texture2D" uid="uid://m25rlxrddtii" path="res://assets/stars/2SPACETILESET2.png" id="6_wuhcr"]
+[ext_resource type="Texture2D" uid="uid://c5m8gbofbgxgy" path="res://assets/stars/3SPACETILESET3.png" id="7_tjxu1"]
+[ext_resource type="Texture2D" uid="uid://dhwalnol3cfkn" path="res://assets/stars/4SPACETILESET4.png" id="8_hddsv"]
+[ext_resource type="Texture2D" uid="uid://b8qh4u5bedogt" path="res://assets/stars/5SPACETILESET5.png" id="9_kqny8"]
+[ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="10_3mbja"]
+[ext_resource type="FontFile" uid="uid://s0362j5y7c1h" path="res://assets/font/FutilePro.ttf" id="11_0vl4r"]
+[ext_resource type="Texture2D" uid="uid://fl5bckc5nsox" path="res://assets/button/border.png" id="12_o416l"]
+[ext_resource type="Texture2D" uid="uid://t2jrn7hpo3o5" path="res://assets/splitted ffrom tilemap/spaceship1.png" id="13_uvlgp"]
+[ext_resource type="FontFile" uid="uid://ds4r3eag6aco3" path="res://assets/font/NotJamSciMono10.ttf" id="14_arckb"]
+[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/splitted ffrom tilemap/spaceship.webp" id="15_i32es"]
+[ext_resource type="Texture2D" uid="uid://copck0acvkpuo" path="res://assets/splitted ffrom tilemap/spaceship2.png" id="16_thwi0"]
+[ext_resource type="Texture2D" uid="uid://duch4drp3gbmw" path="res://assets/splitted ffrom tilemap/laser.webp" id="17_cduiw"]
+[ext_resource type="Texture2D" uid="uid://b4k3grarllryj" path="res://assets/splitted ffrom tilemap/asteroid12.png" id="18_8v0lj"]
+[ext_resource type="Texture2D" uid="uid://ci7mp77u4ndw1" path="res://assets/splitted ffrom tilemap/asteroid7.png" id="19_la2v2"]
+[ext_resource type="Texture2D" uid="uid://c1tw01kwn0naq" path="res://assets/splitted ffrom tilemap/asteroid1.png" id="20_5w2ec"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vioj"]
-texture = ExtResource("1_ag7af")
+texture = ExtResource("2_sn7g7")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnty3"]
-texture = ExtResource("2_dfpta")
+texture = ExtResource("3_ljmsc")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8fqw2"]
-texture = ExtResource("3_wfjbu")
+texture = ExtResource("4_26f0l")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ng8xi"]
-texture = ExtResource("4_du6ut")
+texture = ExtResource("5_dwntc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -46,7 +46,7 @@ texture = ExtResource("4_du6ut")
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7p6s"]
-texture = ExtResource("5_knf3b")
+texture = ExtResource("6_wuhcr")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -58,7 +58,7 @@ texture = ExtResource("5_knf3b")
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lf8b3"]
-texture = ExtResource("6_tae5p")
+texture = ExtResource("7_tjxu1")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -70,13 +70,13 @@ texture = ExtResource("6_tae5p")
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljtoj"]
-texture = ExtResource("7_xovuv")
+texture = ExtResource("8_hddsv")
 0:0/0 = 0
 0:1/0 = 0
 0:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3njcb"]
-texture = ExtResource("8_3gq8v")
+texture = ExtResource("9_kqny8")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -96,8 +96,8 @@ sources/5 = SubResource("TileSetAtlasSource_lf8b3")
 sources/6 = SubResource("TileSetAtlasSource_ljtoj")
 sources/7 = SubResource("TileSetAtlasSource_3njcb")
 
-[node name="menu" type="Node"]
-script = ExtResource("1_d2odj")
+[node name="Menu" type="Node"]
+script = ExtResource("1_fgewk")
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xthyk")
@@ -109,13 +109,16 @@ layer_1/tile_data = PackedInt32Array(983044, 131075, 0, 589844, 131075, 0, 26214
 layer_2/name = "starry"
 layer_2/tile_data = PackedInt32Array(851973, 2, 0, 524296, 2, 0, 393236, 2, 0, 1114136, 2, 0, 65537, 1, 0, 1114113, 1, 0, 131095, 1, 0, 524291, 3, 2, 196620, 3, 2, 917526, 3, 2, 1048587, 65539, 1, 655379, 131075, 2, 327684, 131075, 2, 589837, 6, 0, 589835, 6, 2, 720910, 65541, 1, 1179667, 65541, 1, 589847, 65541, 1, 262158, 65541, 1, 65547, 65541, 1, 196615, 65541, 1, 1179651, 5, 2, 983041, 5, 2, 851971, 5, 2, 655362, 5, 2, 589831, 5, 2, 196611, 5, 2, 65543, 5, 2, 196625, 5, 2, 393233, 5, 2, 131092, 5, 2, 1114134, 5, 2, 851991, 5, 2, 720913, 5, 2, 524304, 5, 2, 851980, 5, 0, 983049, 5, 0, 1048590, 5, 0, 851983, 5, 0, 851985, 5, 0, 458773, 5, 0, 327697, 5, 0, 65551, 5, 0, 196617, 5, 0, 65542, 5, 0, 262155, 5, 0, 1048582, 5, 0, 786439, 5, 0, 655366, 5, 0, 458759, 5, 0, 393225, 5, 0, 393228, 4, 0, 983053, 4, 0, 1179662, 4, 0, 1179658, 4, 0, 1114129, 4, 0, 917523, 4, 0, 1179655, 131076, 2, 851976, 131076, 2, 327702, 131076, 2, 262163, 131076, 0, 65558, 131076, 0, 65550, 131076, 0)
 
-[node name="fire" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("12_bi0vm")
+[node name="Fire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_3mbja")
 autoplay = true
 
-[node name="BUTTONS" type="Node" parent="."]
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="PLAY" type="TextureButton" parent="BUTTONS"]
+[node name="Play" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 13.0
 offset_top = 135.0
 offset_right = 83.0
@@ -123,198 +126,201 @@ offset_bottom = 157.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="BUTTONS/PLAY"]
+[node name="Label" type="Label" parent="Buttons/Play"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = -2.0
 offset_right = 69.0
 offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("11_ltf35")
+theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
 text = "PLAY"
 
-[node name="TextureRect" type="TextureRect" parent="BUTTONS/PLAY"]
+[node name="TextureRect" type="TextureRect" parent="Buttons/Play"]
 layout_mode = 0
 offset_left = -5.0
 offset_top = -3.0
 offset_right = 65.0
 offset_bottom = 27.0
-texture = ExtResource("12_qe7im")
+texture = ExtResource("12_o416l")
 
-[node name="CREDITS" type="TextureButton" parent="BUTTONS"]
+[node name="Credits" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 12.0
 offset_top = 154.0
 offset_right = 142.0
 offset_bottom = 186.0
 
-[node name="Label2" type="Label" parent="BUTTONS/CREDITS"]
+[node name="Label2" type="Label" parent="Buttons/Credits"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 4.0
 offset_right = 122.0
 offset_bottom = 29.0
-theme_override_fonts/font = ExtResource("11_ltf35")
+theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
 text = "CREDITS"
 
-[node name="TextureRect2" type="TextureRect" parent="BUTTONS/CREDITS"]
+[node name="TextureRect2" type="TextureRect" parent="Buttons/Credits"]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 6.0
 offset_right = 66.0
 offset_bottom = 31.0
-texture = ExtResource("12_qe7im")
+texture = ExtResource("12_o416l")
 
-[node name="SETTINGS" type="TextureButton" parent="BUTTONS"]
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 13.0
 offset_top = 185.0
 offset_right = 153.0
 offset_bottom = 207.0
 
-[node name="TextureRect" type="TextureRect" parent="BUTTONS/SETTINGS"]
+[node name="TextureRect" type="TextureRect" parent="Buttons/Settings"]
 layout_mode = 0
 offset_left = -5.0
 offset_top = -2.0
 offset_right = 65.0
 offset_bottom = 23.0
-texture = ExtResource("12_qe7im")
+texture = ExtResource("12_o416l")
 
-[node name="Label3" type="Label" parent="BUTTONS/SETTINGS"]
+[node name="Label3" type="Label" parent="Buttons/Settings"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = -3.0
 offset_right = 139.0
 offset_bottom = 22.0
-theme_override_fonts/font = ExtResource("11_ltf35")
+theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
 text = "SETTINGS
 "
 
-[node name="LEAVE" type="TextureButton" parent="BUTTONS"]
+[node name="Leave" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 12.0
 offset_top = 208.0
 offset_right = 100.0
 offset_bottom = 229.0
 
-[node name="Label3" type="Label" parent="BUTTONS/LEAVE"]
+[node name="Label3" type="Label" parent="Buttons/Leave"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = -3.0
 offset_right = 140.0
 offset_bottom = 22.0
-theme_override_fonts/font = ExtResource("11_ltf35")
+theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
 text = "LEAVE"
 
-[node name="LABELS" type="Node" parent="."]
+[node name="Labels" type="Node" parent="."]
 
-[node name="Sprite2D4" type="Sprite2D" parent="LABELS"]
+[node name="Sprite2D4" type="Sprite2D" parent="Labels"]
 position = Vector2(203, 42)
 rotation = 2.05635
 scale = Vector2(4, 4)
-texture = ExtResource("13_2a00y")
+texture = ExtResource("13_uvlgp")
 
-[node name="Label2" type="Label" parent="LABELS"]
+[node name="Label2" type="Label" parent="Labels"]
 offset_left = 364.0
 offset_top = 290.0
 offset_right = 421.0
 offset_bottom = 313.0
-theme_override_fonts/font = ExtResource("16_dqxpe")
+theme_override_fonts/font = ExtResource("14_arckb")
 theme_override_font_sizes/font_size = 10
 text = "V.1.0"
 
-[node name="Label" type="Label" parent="LABELS"]
+[node name="Label" type="Label" parent="Labels"]
 offset_left = 154.0
 offset_top = 70.0
 offset_right = 194.0
 offset_bottom = 93.0
 
-[node name="Label4" type="Label" parent="LABELS"]
+[node name="Label4" type="Label" parent="Labels"]
 offset_left = 2.0
 offset_top = 3.0
 offset_right = 272.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.141176, 0.141176, 0.141176, 1)
-theme_override_fonts/font = ExtResource("16_dqxpe")
+theme_override_fonts/font = ExtResource("14_arckb")
 theme_override_font_sizes/font_size = 64
 text = "TIME
 TASKER"
 
-[node name="Label3" type="Label" parent="LABELS"]
+[node name="Label3" type="Label" parent="Labels"]
 offset_left = 7.0
 offset_top = 3.0
 offset_right = 151.0
 offset_bottom = 108.0
-theme_override_fonts/font = ExtResource("16_dqxpe")
+theme_override_fonts/font = ExtResource("14_arckb")
 theme_override_font_sizes/font_size = 64
 text = "TIME
 TASKER"
 
-[node name="SPRITES" type="Node" parent="."]
+[node name="Sprites" type="Node" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="SPRITES"]
+[node name="Sprite2D" type="Sprite2D" parent="Sprites"]
 position = Vector2(301, 185)
 rotation = -0.769449
 scale = Vector2(4, 4)
-texture = ExtResource("15_30rty")
+texture = ExtResource("15_i32es")
 
-[node name="Sprite2D3" type="Sprite2D" parent="SPRITES"]
+[node name="Sprite2D3" type="Sprite2D" parent="Sprites"]
 position = Vector2(152, 287)
 rotation = 0.322659
 scale = Vector2(4, 4)
-texture = ExtResource("16_7y5xs")
+texture = ExtResource("16_thwi0")
 
-[node name="Laser" type="Sprite2D" parent="SPRITES"]
+[node name="Laser" type="Sprite2D" parent="Sprites"]
 position = Vector2(288, 135)
 rotation = -0.723606
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("17_lugmr")
+texture = ExtResource("17_cduiw")
 
-[node name="Laser2" type="Sprite2D" parent="SPRITES"]
+[node name="Laser2" type="Sprite2D" parent="Sprites"]
 position = Vector2(266, 179)
 rotation = -0.723606
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("17_lugmr")
+texture = ExtResource("17_cduiw")
 
-[node name="Laser3" type="Sprite2D" parent="SPRITES"]
+[node name="Laser3" type="Sprite2D" parent="Sprites"]
 position = Vector2(199, 231)
 rotation = 0.317163
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("17_lugmr")
+texture = ExtResource("17_cduiw")
 
-[node name="Laser4" type="Sprite2D" parent="SPRITES"]
+[node name="Laser4" type="Sprite2D" parent="Sprites"]
 position = Vector2(142, 234)
 rotation = 0.336956
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("17_lugmr")
+texture = ExtResource("17_cduiw")
 
-[node name="Asteroid12" type="Sprite2D" parent="SPRITES"]
+[node name="Asteroid12" type="Sprite2D" parent="Sprites"]
 position = Vector2(99, 259)
 rotation = -0.619952
 scale = Vector2(1.4, 1.4)
-texture = ExtResource("18_fplji")
+texture = ExtResource("18_8v0lj")
 
-[node name="Asteroid7" type="Sprite2D" parent="SPRITES"]
+[node name="Asteroid7" type="Sprite2D" parent="Sprites"]
 position = Vector2(151, 137)
 rotation = -0.584509
-texture = ExtResource("19_55dr1")
+texture = ExtResource("19_la2v2")
 
-[node name="Asteroid1" type="Sprite2D" parent="SPRITES"]
+[node name="Asteroid1" type="Sprite2D" parent="Sprites"]
 position = Vector2(348, 77)
 rotation = 1.78808
 scale = Vector2(3, 3)
-texture = ExtResource("20_4uf5o")
+texture = ExtResource("20_5w2ec")
 
-[node name="Asteroid8" type="Sprite2D" parent="SPRITES"]
+[node name="Asteroid8" type="Sprite2D" parent="Sprites"]
 position = Vector2(263, 10)
-texture = ExtResource("19_55dr1")
+texture = ExtResource("19_la2v2")
 
-[node name="Asteroid13" type="Sprite2D" parent="SPRITES"]
+[node name="Asteroid13" type="Sprite2D" parent="Sprites"]
 position = Vector2(212, 198)
 rotation = 0.481042
 scale = Vector2(2, 2)
-texture = ExtResource("18_fplji")
+texture = ExtResource("18_8v0lj")
 
-[connection signal="button_up" from="BUTTONS/PLAY" to="." method="_on_play_button_up"]
-[connection signal="button_up" from="BUTTONS/CREDITS" to="." method="_on_credits_button_up"]
-[connection signal="button_up" from="BUTTONS/LEAVE" to="." method="_on_leave_button_up"]
+[connection signal="button_up" from="Buttons/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Buttons/Credits" to="." method="_on_credits_button_up"]
+[connection signal="button_up" from="Buttons/Leave" to="." method="_on_leave_button_up"]

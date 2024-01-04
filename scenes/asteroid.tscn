@@ -1,28 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cq5xjq42vqle1"]
+[gd_scene load_steps=11 format=3 uid="uid://cq5xjq42vqle1"]
 
 [ext_resource type="Script" path="res://scripts/asteroid.gd" id="1_jvtw7"]
 [ext_resource type="Texture2D" uid="uid://cf4pjsq20246g" path="res://assets/asteroids.webp" id="2_lgj0c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l2jqj"]
 radius = 6.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28dm0"]
-texture = ExtResource("2_lgj0c")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-2:2/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_nog64"]
-sources/0 = SubResource("TileSetAtlasSource_28dm0")
 
 [sub_resource type="Curve" id="Curve_apd75"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -68,10 +50,10 @@ script = ExtResource("1_jvtw7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_l2jqj")
 
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-8, -8)
-tile_set = SubResource("TileSet_nog64")
-format = 2
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lgj0c")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="AsteroidTimeout" type="Timer" parent="."]
 wait_time = 20.0
