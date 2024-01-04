@@ -67,5 +67,6 @@ func _process(_delta):
 
 
 func _on_player_after_death():
+	$UI.queue_free()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	pass  # Replace with function body.

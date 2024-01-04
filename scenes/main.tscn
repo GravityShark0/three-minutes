@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2q8d16qp7iob"]
+[gd_scene load_steps=6 format=3 uid="uid://d2q8d16qp7iob"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hm32l"]
 [ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://scenes/player.tscn" id="1_qyirn"]
 [ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://scenes/ui.tscn" id="2_ah4l3"]
 [ext_resource type="PackedScene" uid="uid://cmi0br8uamtcw" path="res://scenes/background.tscn" id="3_71btw"]
+[ext_resource type="Script" path="res://scripts/camera.gd" id="5_w8y54"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(478, -195)
@@ -22,6 +23,7 @@ unique_name_in_owner = true
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 position_smoothing_speed = 15.0
+script = ExtResource("5_w8y54")
 
 [node name="Projectiles" type="Node2D" parent="."]
 
