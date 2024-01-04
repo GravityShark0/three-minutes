@@ -124,6 +124,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="BUTTONS/PLAY"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = -2.0
 offset_right = 69.0
@@ -133,6 +134,7 @@ theme_override_font_sizes/font_size = 28
 text = "PLAY"
 
 [node name="TextureRect" type="TextureRect" parent="BUTTONS/PLAY"]
+layout_mode = 0
 offset_left = -5.0
 offset_top = -3.0
 offset_right = 65.0
@@ -156,6 +158,7 @@ theme_override_font_sizes/font_size = 28
 text = "CREDITS"
 
 [node name="TextureRect2" type="TextureRect" parent="BUTTONS/CREDITS"]
+layout_mode = 0
 offset_left = -4.0
 offset_top = 6.0
 offset_right = 66.0
@@ -169,6 +172,7 @@ offset_right = 153.0
 offset_bottom = 207.0
 
 [node name="TextureRect" type="TextureRect" parent="BUTTONS/SETTINGS"]
+layout_mode = 0
 offset_left = -5.0
 offset_top = -2.0
 offset_right = 65.0
@@ -176,6 +180,7 @@ offset_bottom = 23.0
 texture = ExtResource("12_qe7im")
 
 [node name="Label3" type="Label" parent="BUTTONS/SETTINGS"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = -3.0
 offset_right = 139.0
@@ -192,6 +197,7 @@ offset_right = 100.0
 offset_bottom = 229.0
 
 [node name="Label3" type="Label" parent="BUTTONS/LEAVE"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = -3.0
 offset_right = 140.0
@@ -253,7 +259,7 @@ scale = Vector2(4, 4)
 texture = ExtResource("15_30rty")
 
 [node name="Sprite2D3" type="Sprite2D" parent="SPRITES"]
-position = Vector2(180, 245)
+position = Vector2(152, 287)
 rotation = 0.322659
 scale = Vector2(4, 4)
 texture = ExtResource("16_7y5xs")
@@ -271,14 +277,14 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_lugmr")
 
 [node name="Laser3" type="Sprite2D" parent="SPRITES"]
-position = Vector2(230, 177)
-rotation = 0.367328
+position = Vector2(199, 231)
+rotation = 0.317163
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_lugmr")
 
 [node name="Laser4" type="Sprite2D" parent="SPRITES"]
-position = Vector2(167, 203)
-rotation = 0.367328
+position = Vector2(142, 234)
+rotation = 0.336956
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_lugmr")
 
@@ -304,7 +310,7 @@ position = Vector2(263, 10)
 texture = ExtResource("19_55dr1")
 
 [node name="Asteroid13" type="Sprite2D" parent="SPRITES"]
-position = Vector2(246, 238)
+position = Vector2(212, 198)
 rotation = 0.481042
 scale = Vector2(2, 2)
 texture = ExtResource("18_fplji")

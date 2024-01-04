@@ -69,6 +69,7 @@ offset_right = 100.0
 offset_bottom = 229.0
 
 [node name="Label3" type="Label" parent="LEAVE"]
+layout_mode = 0
 offset_left = -2.0
 offset_top = -198.0
 offset_right = 136.0
@@ -78,6 +79,7 @@ theme_override_font_sizes/font_size = 28
 text = "LEAVE"
 
 [node name="TextureRect" type="TextureRect" parent="LEAVE"]
+layout_mode = 0
 offset_left = -9.0
 offset_top = -198.0
 offset_right = 93.0
