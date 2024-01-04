@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bfvy7el1gy6cw"
-path="res://.godot/imported/CompassPro.ttf-bad8dcdbc46b3e9f7d5c450fce4711b5.fontdata"
+uid="uid://ixe6yy77jlpx"
+path="res://.godot/imported/mago2.ttf-ad7988f0a7474786aa46031a775f51d9.fontdata"
 
 [deps]
 
-source_file="res://assets/font/CompassPro.ttf"
-dest_files=["res://.godot/imported/CompassPro.ttf-bad8dcdbc46b3e9f7d5c450fce4711b5.fontdata"]
+source_file="res://assets/font/mago/mago2.ttf"
+dest_files=["res://.godot/imported/mago2.ttf-ad7988f0a7474786aa46031a775f51d9.fontdata"]
 
 [params]
 

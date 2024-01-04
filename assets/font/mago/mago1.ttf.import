@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://s0362j5y7c1h"
-path="res://.godot/imported/FutilePro.ttf-1aa5105499dd85bec31394e339ca0ef8.fontdata"
+uid="uid://dtvxas5lqmnra"
+path="res://.godot/imported/mago1.ttf-22a3359d2fab91b3ac30de6a149f7908.fontdata"
 
 [deps]
 
-source_file="res://assets/font/FutilePro.ttf"
-dest_files=["res://.godot/imported/FutilePro.ttf-1aa5105499dd85bec31394e339ca0ef8.fontdata"]
+source_file="res://assets/font/mago/mago1.ttf"
+dest_files=["res://.godot/imported/mago1.ttf-22a3359d2fab91b3ac30de6a149f7908.fontdata"]
 
 [params]
 

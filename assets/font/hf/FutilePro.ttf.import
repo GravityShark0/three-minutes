@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d0mnu35t8yubf"
-path="res://.godot/imported/ExpressionPro.ttf-eba35aa5968897332a6d4bbd85cb51c9.fontdata"
+uid="uid://s0362j5y7c1h"
+path="res://.godot/imported/FutilePro.ttf-a270e7a9bd4f0a27ede4f02afee98dbc.fontdata"
 
 [deps]
 
-source_file="res://assets/font/ExpressionPro.ttf"
-dest_files=["res://.godot/imported/ExpressionPro.ttf-eba35aa5968897332a6d4bbd85cb51c9.fontdata"]
+source_file="res://assets/font/hf/FutilePro.ttf"
+dest_files=["res://.godot/imported/FutilePro.ttf-a270e7a9bd4f0a27ede4f02afee98dbc.fontdata"]
 
 [params]
 
@@ -27,7 +27,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bjplu1hpn2sxd"
-path="res://.godot/imported/mago3.ttf-742d9b37cabeeb016c0ec81bb3e0f3ed.fontdata"
+uid="uid://bq57godqcc8e2"
+path="res://.godot/imported/MatchupPro.ttf-1742334b73b6862980a0d83ecc6bea30.fontdata"
 
 [deps]
 
-source_file="res://assets/font/mago3.ttf"
-dest_files=["res://.godot/imported/mago3.ttf-742d9b37cabeeb016c0ec81bb3e0f3ed.fontdata"]
+source_file="res://assets/font/hf/MatchupPro.ttf"
+dest_files=["res://.godot/imported/MatchupPro.ttf-1742334b73b6862980a0d83ecc6bea30.fontdata"]
 
 [params]
 

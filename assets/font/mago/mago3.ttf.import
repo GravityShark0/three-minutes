@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ixe6yy77jlpx"
-path="res://.godot/imported/mago2.ttf-6d57b12276477c60e3dafeb7311de9f9.fontdata"
+uid="uid://bjplu1hpn2sxd"
+path="res://.godot/imported/mago3.ttf-31b4145ef92e04dafebe65fef50587f2.fontdata"
 
 [deps]
 
-source_file="res://assets/font/mago2.ttf"
-dest_files=["res://.godot/imported/mago2.ttf-6d57b12276477c60e3dafeb7311de9f9.fontdata"]
+source_file="res://assets/font/mago/mago3.ttf"
+dest_files=["res://.godot/imported/mago3.ttf-31b4145ef92e04dafebe65fef50587f2.fontdata"]
 
 [params]
 
