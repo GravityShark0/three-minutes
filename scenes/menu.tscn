@@ -10,10 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dhwalnol3cfkn" path="res://assets/stars/4SPACETILESET4.png" id="8_hddsv"]
 [ext_resource type="Texture2D" uid="uid://b8qh4u5bedogt" path="res://assets/stars/5SPACETILESET5.png" id="9_kqny8"]
 [ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="10_3mbja"]
-[ext_resource type="FontFile" uid="uid://s0362j5y7c1h" path="res://assets/font/FutilePro.ttf" id="11_0vl4r"]
+[ext_resource type="FontFile" uid="uid://s0362j5y7c1h" path="res://assets/font/hf/FutilePro.ttf" id="11_0vl4r"]
 [ext_resource type="Texture2D" uid="uid://fl5bckc5nsox" path="res://assets/button/border.png" id="12_o416l"]
 [ext_resource type="Texture2D" uid="uid://t2jrn7hpo3o5" path="res://assets/splitted ffrom tilemap/spaceship1.png" id="13_uvlgp"]
-[ext_resource type="FontFile" uid="uid://ds4r3eag6aco3" path="res://assets/font/NotJamSciMono10.ttf" id="14_arckb"]
+[ext_resource type="FontFile" uid="uid://ds4r3eag6aco3" path="res://assets/font/notjam/NotJamSciMono10.ttf" id="14_arckb"]
 [ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/splitted ffrom tilemap/spaceship.webp" id="15_i32es"]
 [ext_resource type="Texture2D" uid="uid://copck0acvkpuo" path="res://assets/splitted ffrom tilemap/spaceship2.png" id="16_thwi0"]
 [ext_resource type="Texture2D" uid="uid://duch4drp3gbmw" path="res://assets/splitted ffrom tilemap/laser.webp" id="17_cduiw"]
@@ -119,44 +119,42 @@ anchors_preset = 0
 
 [node name="Play" type="Button" parent="Buttons"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 135.0
+offset_left = 10.0
+offset_top = 133.0
 offset_right = 83.0
-offset_bottom = 157.0
+offset_bottom = 161.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="Buttons/Play"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = -2.0
-offset_right = 69.0
-offset_bottom = 23.0
+offset_left = 4.0
+offset_right = 72.0
+offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
 text = "PLAY"
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Play"]
 layout_mode = 0
-offset_left = -5.0
-offset_top = -3.0
-offset_right = 65.0
-offset_bottom = 27.0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 68.0
+offset_bottom = 29.0
 texture = ExtResource("12_o416l")
 
 [node name="Credits" type="Button" parent="Buttons"]
 layout_mode = 0
 offset_left = 12.0
-offset_top = 154.0
-offset_right = 142.0
-offset_bottom = 186.0
+offset_top = 160.0
+offset_right = 135.0
+offset_bottom = 187.0
 
 [node name="Label2" type="Label" parent="Buttons/Credits"]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 4.0
 offset_right = 122.0
-offset_bottom = 29.0
+offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
 text = "CREDITS"
@@ -164,31 +162,30 @@ text = "CREDITS"
 [node name="TextureRect2" type="TextureRect" parent="Buttons/Credits"]
 layout_mode = 0
 offset_left = -4.0
-offset_top = 6.0
 offset_right = 66.0
-offset_bottom = 31.0
+offset_bottom = 25.0
 texture = ExtResource("12_o416l")
 
 [node name="Settings" type="Button" parent="Buttons"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 185.0
+offset_left = 10.0
+offset_top = 187.0
 offset_right = 153.0
-offset_bottom = 207.0
+offset_bottom = 209.0
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Settings"]
 layout_mode = 0
-offset_left = -5.0
+offset_left = -2.0
 offset_top = -2.0
-offset_right = 65.0
+offset_right = 68.0
 offset_bottom = 23.0
 texture = ExtResource("12_o416l")
 
 [node name="Label3" type="Label" parent="Buttons/Settings"]
 layout_mode = 0
-offset_left = 1.0
+offset_left = 4.0
 offset_top = -3.0
-offset_right = 139.0
+offset_right = 142.0
 offset_bottom = 22.0
 theme_override_fonts/font = ExtResource("11_0vl4r")
 theme_override_font_sizes/font_size = 28
@@ -198,9 +195,9 @@ text = "SETTINGS
 [node name="Leave" type="Button" parent="Buttons"]
 layout_mode = 0
 offset_left = 12.0
-offset_top = 208.0
+offset_top = 210.0
 offset_right = 100.0
-offset_bottom = 229.0
+offset_bottom = 231.0
 
 [node name="Label3" type="Label" parent="Buttons/Leave"]
 layout_mode = 0
@@ -277,8 +274,8 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_cduiw")
 
 [node name="Laser2" type="Sprite2D" parent="Sprites"]
-position = Vector2(266, 179)
-rotation = -0.723606
+position = Vector2(256, 171)
+rotation = -0.769637
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_cduiw")
 

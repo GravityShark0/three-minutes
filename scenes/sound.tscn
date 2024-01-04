@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0t34ikxy6wmw"]
+
+[ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="1_o446m"]
+[ext_resource type="Script" path="res://scripts/fire.gd" id="2_4ofd7"]
+
+[node name="Sound" type="Node2D"]
+
+[node name="fire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_o446m")
+script = ExtResource("2_4ofd7")

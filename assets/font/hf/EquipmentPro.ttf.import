@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bq57godqcc8e2"
-path="res://.godot/imported/MatchupPro.ttf-313a1d31a917a4061d69c13f60c7f84c.fontdata"
+uid="uid://bmvb0vudy3ct5"
+path="res://.godot/imported/EquipmentPro.ttf-ed87f467a39eb0b10b994f032e1c3582.fontdata"
 
 [deps]
 
-source_file="res://assets/font/MatchupPro.ttf"
-dest_files=["res://.godot/imported/MatchupPro.ttf-313a1d31a917a4061d69c13f60c7f84c.fontdata"]
+source_file="res://assets/font/hf/EquipmentPro.ttf"
+dest_files=["res://.godot/imported/EquipmentPro.ttf-ed87f467a39eb0b10b994f032e1c3582.fontdata"]
 
 [params]
 
