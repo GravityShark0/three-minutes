@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b5bfc5c56k4fj"]
+[gd_scene load_steps=14 format=3 uid="uid://b5bfc5c56k4fj"]
 
 [ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="1_wdb3q"]
 [ext_resource type="Script" path="res://scenes/credits.gd" id="1_ylrlj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://m25rlxrddtii" path="res://assets/stars/2SPACETILESET2.png" id="4_rtn0x"]
 [ext_resource type="FontFile" uid="uid://dtvxas5lqmnra" path="res://assets/font/mago/mago1.ttf" id="6_u4rgh"]
 [ext_resource type="Texture2D" uid="uid://fl5bckc5nsox" path="res://assets/button/border.png" id="7_exi34"]
+[ext_resource type="Texture2D" uid="uid://c2xmqi3u0klit" path="res://assets/burger.jpg" id="8_do50p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_23n8b"]
 texture = ExtResource("1_wdb3q")
@@ -127,5 +128,11 @@ theme_override_fonts/font = ExtResource("6_u4rgh")
 theme_override_font_sizes/font_size = 32
 text = "TIME TASKER
 "
+
+[node name="burger" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(209.5, 160.5)
+scale = Vector2(0.23, 0.104444)
+texture = ExtResource("8_do50p")
 
 [connection signal="button_up" from="Leave" to="." method="_on_leave_button_up"]

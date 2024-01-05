@@ -111,7 +111,6 @@ layer_2/tile_data = PackedInt32Array(851973, 2, 0, 524296, 2, 0, 393236, 2, 0, 1
 
 [node name="Fire" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_3mbja")
-autoplay = true
 
 [node name="Buttons" type="Control" parent="."]
 layout_mode = 3
@@ -145,10 +144,10 @@ texture = ExtResource("12_o416l")
 
 [node name="Credits" type="Button" parent="Buttons"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 160.0
-offset_right = 135.0
-offset_bottom = 187.0
+offset_left = 10.0
+offset_top = 161.0
+offset_right = 133.0
+offset_bottom = 188.0
 
 [node name="Label2" type="Label" parent="Buttons/Credits"]
 layout_mode = 0
@@ -161,17 +160,17 @@ text = "CREDITS"
 
 [node name="TextureRect2" type="TextureRect" parent="Buttons/Credits"]
 layout_mode = 0
-offset_left = -4.0
-offset_right = 66.0
+offset_left = -2.0
+offset_right = 68.0
 offset_bottom = 25.0
 texture = ExtResource("12_o416l")
 
 [node name="Settings" type="Button" parent="Buttons"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 187.0
+offset_top = 188.0
 offset_right = 153.0
-offset_bottom = 209.0
+offset_bottom = 210.0
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/Settings"]
 layout_mode = 0
@@ -194,9 +193,9 @@ text = "SETTINGS
 
 [node name="Leave" type="Button" parent="Buttons"]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 10.0
 offset_top = 210.0
-offset_right = 100.0
+offset_right = 98.0
 offset_bottom = 231.0
 
 [node name="Label3" type="Label" parent="Buttons/Leave"]

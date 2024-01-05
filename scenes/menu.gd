@@ -1,7 +1,15 @@
 extends Node
 
 
-func _ready():
+func _ready(): #just cooked osmething
+	var current_scene = get_tree().get_current_scene()
+	
+
+	if current_scene.get_name() == "Menu":
+		Sound.play()
+
+
+func _process(delta):
 	pass
 
 #menu button / play
