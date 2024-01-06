@@ -8,10 +8,6 @@
 position = Vector2(0, 1)
 motion_mode = 1
 script = ExtResource("1_wdmor")
-speed = null
-slow_speed_divisor = null
-dash_speed = null
-ship_health = null
 
 [node name="ShipEffects" parent="." instance=ExtResource("2_lv8wo")]
 

@@ -68,7 +68,6 @@ func shoot():
 func hit(damage: int):
 	if dashing or got_hit:
 		return
-
 	got_hit = true
 	$ShipTimers/HitLag.start()
 	$ShipEffects/Hit.emitting = true

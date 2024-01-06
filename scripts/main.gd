@@ -66,9 +66,8 @@ func _process(_delta):
 					Vector2.UP + Vector2(randf_range(-1, 1), 0)
 				)
 
-
-func _on_player_after_death():
-	get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
-
 func _on_upgrade_button_pressed(example):
 	print(example)
+
+func _on_player_ship_after_death():
+	get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")

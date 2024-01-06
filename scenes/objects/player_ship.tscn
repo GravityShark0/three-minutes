@@ -15,4 +15,7 @@ texture = ExtResource("2_dsdly")
 [node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CircleShape2D_yuuyh")
 
+[node name="ShipTimers" parent="." index="4"]
+hit_lag = 1.2
+
 [node name="PlayerControl" parent="." index="5" instance=ExtResource("3_0dh47")]
