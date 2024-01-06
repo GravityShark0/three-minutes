@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://2whp5hi4d4d8"]
+[gd_scene load_steps=5 format=3 uid="uid://2whp5hi4d4d8"]
 
 [ext_resource type="Script" path="res://scripts/objects/player.gd" id="1_wdmor"]
 [ext_resource type="PackedScene" uid="uid://dnmtvxqvfbikb" path="res://scenes/components/ship_effects.tscn" id="2_lv8wo"]
+[ext_resource type="SpriteFrames" uid="uid://4ubpa3mqofto" path="res://scenes/objects/player_ship.tres" id="3_6ddbp"]
 [ext_resource type="PackedScene" uid="uid://tmmd7lcqoful" path="res://scenes/components/ship_timers.tscn" id="3_7jb21"]
 
 [node name="BaseShip" type="CharacterBody2D"]
-position = Vector2(0, 1)
 motion_mode = 1
 script = ExtResource("1_wdmor")
 
@@ -16,6 +16,8 @@ position = Vector2(-1, 0)
 rotation = 1.5708
 
 [node name="Flame" type="AnimatedSprite2D" parent="Sprites"]
+sprite_frames = ExtResource("3_6ddbp")
+animation = &"offthrust"
 
 [node name="Nozzle" type="Sprite2D" parent="Sprites"]
 

@@ -21,6 +21,7 @@ func _process(_delta):
 		ship.move(direction)
 	else:
 		ship.move(Vector2.ZERO)
+		$"../Sprites/Flame".play("offthrust")
 
 	if Input.is_action_pressed("shift"):
 		ship.slow_move()

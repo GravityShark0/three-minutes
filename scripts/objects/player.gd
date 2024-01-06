@@ -19,15 +19,18 @@ var can_grenade: bool = true
 var got_hit: bool = false
 var can_dash: bool = true
 var dashing: bool = false
+var dead: bool = false
+
 signal primary_fire(node: Node, pos: Vector2, direction: float)
 signal after_death
 
 
 func _process(_delta):
+	if dead:
+		return
 	if got_hit:
 		visible = not visible
-	if velocity == Vector2.ZERO:
-		$Sprites/Flame.animation = "off"
+		
 	move_and_slide()
 
 
@@ -35,9 +38,11 @@ func _process(_delta):
 ## direction is a normalized vector
 func move(direction: Vector2):
 	look_at(direction + global_position)
-	$Sprites/Flame.animation = "thrust"
+	$Sprites/Flame.visible = true
+	$Sprites/Flame.play("thrust")
 	$ShipEffects/Thrust.emitting = true
 	velocity = (direction * speed)
+
 
 
 ## halves velocity
@@ -49,7 +54,8 @@ func slow_move():
 func dash(direction: Vector2):
 	can_dash = false
 	dashing = true
-	$Sprites/Flame.animation = "dash"
+	$Sprites/Flame.visible = true
+	$Sprites/Flame.play("dash")
 	$ShipEffects/Dash.rotation = direction.angle() - rotation
 	$ShipEffects/Dash.emitting = true
 	$ShipTimers/DashLength.start()
@@ -80,10 +86,11 @@ func hit(damage: int):
 
 
 func death():
-	velocity = Vector2i.ZERO
+	dead = true
+	velocity = Vector2.ZERO
 	dashing = true
 	$CollisionShape2D.queue_free()
-	$Sprite.queue_free()
+	$Sprites.queue_free()
 	$ShipEffects/Explode.emitting = true
 
 

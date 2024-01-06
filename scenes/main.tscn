@@ -24,7 +24,6 @@ visible = false
 
 [node name="PlayerShip" parent="Ships" instance=ExtResource("5_5n0jl")]
 unique_name_in_owner = true
-position = Vector2(0, 0)
 
 [node name="Camera2D" parent="Ships/PlayerShip" instance=ExtResource("6_pri73")]
 position = Vector2(0, -1)
