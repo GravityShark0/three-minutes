@@ -11,7 +11,86 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_84r8l")
 
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_right = 175.0
+offset_bottom = 300.0
+grow_horizontal = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Titles" type="GridContainer" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+columns = 3
+
+[node name="Damage" type="Label" parent="ScrollContainer/VBoxContainer/Titles"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Damage
+"
+horizontal_alignment = 1
+
+[node name="Speed" type="Label" parent="ScrollContainer/VBoxContainer/Titles"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+text = "Speed"
+horizontal_alignment = 1
+
+[node name="Money" type="Label" parent="ScrollContainer/VBoxContainer/Titles"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+text = "Money"
+horizontal_alignment = 1
+
+[node name="Upgrades" type="GridContainer" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+columns = 3
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/VBoxContainer/Upgrades"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Example Button" type="Button" parent="ScrollContainer/VBoxContainer/Upgrades/ColorRect"]
+layout_mode = 1
+offset_right = 138.0
+offset_bottom = 31.0
+text = "Shitassarstarstra"
+
+[node name="Example Button2" type="Button" parent="ScrollContainer/VBoxContainer/Upgrades/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -69.0
+offset_right = 69.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Shitassarstarstra"
+
+[node name="Example Button3" type="Button" parent="ScrollContainer/VBoxContainer/Upgrades/ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -138.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Shitassarstarstra"
+
 [node name="Damage" type="ScrollContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 112.0
 offset_bottom = 300.0
@@ -36,6 +115,7 @@ offset_bottom = 31.0
 text = "Shitassarstarstra"
 
 [node name="Dash" type="ScrollContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 160.0
 offset_right = 270.0
@@ -46,15 +126,18 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Dash/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 20
 text = "Dash"
 
 [node name="ColorRect" type="ColorRect" parent="Dash/VBoxContainer"]
 custom_minimum_size = Vector2(20, 400)
 layout_mode = 2
+size_flags_horizontal = 8
 color = Color(1, 1, 1, 0)
 
 [node name="Cash" type="ScrollContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 279.0
 offset_right = 400.0
@@ -73,4 +156,7 @@ custom_minimum_size = Vector2(20, 400)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Upgrades/ColorRect/Example Button" to="." method="_on_example_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Upgrades/ColorRect/Example Button2" to="." method="_on_example_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Upgrades/ColorRect/Example Button3" to="." method="_on_example_button_pressed"]
 [connection signal="pressed" from="Damage/VBoxContainer/ColorRect/Example Button" to="." method="_on_example_button_pressed"]

@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://scripts/objects/camera.gd" id="5_w8y54"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(478, -195)
 script = ExtResource("1_hm32l")
 metadata/_edit_vertical_guides_ = [431.0]
 
@@ -19,6 +18,7 @@ script = ExtResource("2_wagps")
 [node name="UI" parent="." instance=ExtResource("2_ah4l3")]
 
 [node name="Upgrade" parent="UI" instance=ExtResource("3_2scnu")]
+visible = false
 
 [node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
 position = Vector2(-3, -14)
