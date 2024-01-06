@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://o1ex3rkkkl4e"]
+
+[ext_resource type="Script" path="res://scripts/ui/upgrademenu.gd" id="1_84r8l"]
+[ext_resource type="PackedScene" uid="uid://b6xw6cpd872ld" path="res://scenes/ui/upgrade/upgrade_button.tscn" id="2_w8f14"]
+
+[node name="Upgrade" type="ColorRect"]
+custom_minimum_size = Vector2(375, 275)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -125.0
+offset_right = 175.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.223529, 0.223529, 0.466667)
+script = ExtResource("1_84r8l")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 30.0
+offset_right = 175.0
+offset_bottom = 330.0
+grow_horizontal = 2
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Upgrades" type="GridContainer" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+columns = 3
+
+[node name="Damage" parent="ScrollContainer/VBoxContainer/Upgrades" instance=ExtResource("2_w8f14")]
+layout_mode = 2
+upgrade_name = "Power"
+
+[node name="Dash" parent="ScrollContainer/VBoxContainer/Upgrades" instance=ExtResource("2_w8f14")]
+layout_mode = 2
+upgrade_name = "Dash Length"
+
+[node name="Moniz" parent="ScrollContainer/VBoxContainer/Upgrades" instance=ExtResource("2_w8f14")]
+layout_mode = 2
+upgrade_name = "Extra Moniz"
+
+[node name="Titles" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+offset_left = 12.5
+offset_right = 365.5
+offset_bottom = 23.0
+columns = 3
+
+[node name="Damage" type="Label" parent="Titles"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Damage
+"
+horizontal_alignment = 1
+
+[node name="Speed" type="Label" parent="Titles"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+text = "Speed"
+horizontal_alignment = 1
+
+[node name="Money" type="Label" parent="Titles"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+text = "Money"
+horizontal_alignment = 1
+
+[connection signal="upgrade" from="ScrollContainer/VBoxContainer/Upgrades/Damage" to="." method="_on_upgrade"]
+[connection signal="upgrade" from="ScrollContainer/VBoxContainer/Upgrades/Dash" to="." method="_on_upgrade"]
+[connection signal="upgrade" from="ScrollContainer/VBoxContainer/Upgrades/Moniz" to="." method="_on_upgrade"]

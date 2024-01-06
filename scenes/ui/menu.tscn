@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://5dneig8ei6xs"]
+[gd_scene load_steps=31 format=3 uid="uid://5dneig8ei6xs"]
 
 [ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_2ukjd"]
 [ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="2_l86e2"]
@@ -12,14 +12,15 @@
 [ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="10_thh64"]
 [ext_resource type="FontFile" uid="uid://s0362j5y7c1h" path="res://assets/font/hf/FutilePro.ttf" id="11_5bjlr"]
 [ext_resource type="Texture2D" uid="uid://fl5bckc5nsox" path="res://assets/button/border.png" id="12_naqxq"]
-[ext_resource type="Texture2D" uid="uid://t2jrn7hpo3o5" path="res://assets/splitted ffrom tilemap/spaceship1.png" id="13_q5hjd"]
+[ext_resource type="Texture2D" uid="uid://t2jrn7hpo3o5" path="res://assets/ship/spaceship1.png" id="13_q5hjd"]
 [ext_resource type="FontFile" uid="uid://ds4r3eag6aco3" path="res://assets/font/notjam/NotJamSciMono10.ttf" id="14_r6ymo"]
-[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/splitted ffrom tilemap/spaceship.webp" id="15_yq7xy"]
-[ext_resource type="Texture2D" uid="uid://copck0acvkpuo" path="res://assets/splitted ffrom tilemap/spaceship2.png" id="16_31hsw"]
-[ext_resource type="Texture2D" uid="uid://duch4drp3gbmw" path="res://assets/splitted ffrom tilemap/laser.webp" id="17_i84o2"]
-[ext_resource type="Texture2D" uid="uid://b4k3grarllryj" path="res://assets/splitted ffrom tilemap/asteroid12.png" id="18_ow1pk"]
-[ext_resource type="Texture2D" uid="uid://ci7mp77u4ndw1" path="res://assets/splitted ffrom tilemap/asteroid7.png" id="19_84kgb"]
-[ext_resource type="Texture2D" uid="uid://c1tw01kwn0naq" path="res://assets/splitted ffrom tilemap/asteroid1.png" id="20_bxfs2"]
+[ext_resource type="Texture2D" uid="uid://cu5o7a6obttd2" path="res://assets/ship/spaceship.webp" id="15_yq7xy"]
+[ext_resource type="Texture2D" uid="uid://copck0acvkpuo" path="res://assets/ship/spaceship2.png" id="16_31hsw"]
+[ext_resource type="Texture2D" uid="uid://duch4drp3gbmw" path="res://assets/ship/laser.webp" id="17_i84o2"]
+[ext_resource type="Texture2D" uid="uid://b4k3grarllryj" path="res://assets/objects/asteroid12.png" id="18_ow1pk"]
+[ext_resource type="Texture2D" uid="uid://ci7mp77u4ndw1" path="res://assets/objects/asteroid7.png" id="19_84kgb"]
+[ext_resource type="Texture2D" uid="uid://c1tw01kwn0naq" path="res://assets/objects/asteroid1.png" id="20_bxfs2"]
+[ext_resource type="PackedScene" uid="uid://b5bfc5c56k4fj" path="res://scenes/ui/credits.tscn" id="21_2kvha"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vioj"]
 texture = ExtResource("2_l86e2")
@@ -99,7 +100,11 @@ sources/7 = SubResource("TileSetAtlasSource_3njcb")
 [node name="Menu" type="Node"]
 script = ExtResource("1_2ukjd")
 
-[node name="Background" type="TileMap" parent="."]
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="TileMap" parent="MainMenu"]
 tile_set = SubResource("TileSet_xthyk")
 format = 2
 layer_0/name = "black"
@@ -109,14 +114,11 @@ layer_1/tile_data = PackedInt32Array(983044, 131075, 0, 589844, 131075, 0, 26214
 layer_2/name = "starry"
 layer_2/tile_data = PackedInt32Array(851973, 2, 0, 524296, 2, 0, 393236, 2, 0, 1114136, 2, 0, 65537, 1, 0, 1114113, 1, 0, 131095, 1, 0, 524291, 3, 2, 196620, 3, 2, 917526, 3, 2, 1048587, 65539, 1, 655379, 131075, 2, 327684, 131075, 2, 589837, 6, 0, 589835, 6, 2, 720910, 65541, 1, 1179667, 65541, 1, 589847, 65541, 1, 262158, 65541, 1, 65547, 65541, 1, 196615, 65541, 1, 1179651, 5, 2, 983041, 5, 2, 851971, 5, 2, 655362, 5, 2, 589831, 5, 2, 196611, 5, 2, 65543, 5, 2, 196625, 5, 2, 393233, 5, 2, 131092, 5, 2, 1114134, 5, 2, 851991, 5, 2, 720913, 5, 2, 524304, 5, 2, 851980, 5, 0, 983049, 5, 0, 1048590, 5, 0, 851983, 5, 0, 851985, 5, 0, 458773, 5, 0, 327697, 5, 0, 65551, 5, 0, 196617, 5, 0, 65542, 5, 0, 262155, 5, 0, 1048582, 5, 0, 786439, 5, 0, 655366, 5, 0, 458759, 5, 0, 393225, 5, 0, 393228, 4, 0, 983053, 4, 0, 1179662, 4, 0, 1179658, 4, 0, 1114129, 4, 0, 917523, 4, 0, 1179655, 131076, 2, 851976, 131076, 2, 327702, 131076, 2, 262163, 131076, 0, 65558, 131076, 0, 65550, 131076, 0)
 
-[node name="Theme" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_thh64")
-
-[node name="Buttons" type="Control" parent="."]
+[node name="Buttons" type="Control" parent="MainMenu"]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Play" type="Button" parent="Buttons"]
+[node name="Play" type="Button" parent="MainMenu/Buttons"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 133.0
@@ -125,7 +127,7 @@ offset_bottom = 161.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="Buttons/Play"]
+[node name="Label" type="Label" parent="MainMenu/Buttons/Play"]
 layout_mode = 0
 offset_left = 4.0
 offset_right = 72.0
@@ -134,7 +136,7 @@ theme_override_fonts/font = ExtResource("11_5bjlr")
 theme_override_font_sizes/font_size = 28
 text = "PLAY"
 
-[node name="TextureRect" type="TextureRect" parent="Buttons/Play"]
+[node name="TextureRect" type="TextureRect" parent="MainMenu/Buttons/Play"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = -1.0
@@ -142,14 +144,14 @@ offset_right = 68.0
 offset_bottom = 29.0
 texture = ExtResource("12_naqxq")
 
-[node name="Credits" type="Button" parent="Buttons"]
+[node name="Credits" type="Button" parent="MainMenu/Buttons"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 161.0
 offset_right = 133.0
 offset_bottom = 188.0
 
-[node name="Label2" type="Label" parent="Buttons/Credits"]
+[node name="Label2" type="Label" parent="MainMenu/Buttons/Credits"]
 layout_mode = 0
 offset_left = 2.0
 offset_right = 122.0
@@ -158,21 +160,21 @@ theme_override_fonts/font = ExtResource("11_5bjlr")
 theme_override_font_sizes/font_size = 28
 text = "CREDITS"
 
-[node name="TextureRect2" type="TextureRect" parent="Buttons/Credits"]
+[node name="TextureRect2" type="TextureRect" parent="MainMenu/Buttons/Credits"]
 layout_mode = 0
 offset_left = -2.0
 offset_right = 68.0
 offset_bottom = 25.0
 texture = ExtResource("12_naqxq")
 
-[node name="Settings" type="Button" parent="Buttons"]
+[node name="Settings" type="Button" parent="MainMenu/Buttons"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 188.0
 offset_right = 153.0
 offset_bottom = 210.0
 
-[node name="TextureRect" type="TextureRect" parent="Buttons/Settings"]
+[node name="TextureRect" type="TextureRect" parent="MainMenu/Buttons/Settings"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = -2.0
@@ -180,7 +182,7 @@ offset_right = 68.0
 offset_bottom = 23.0
 texture = ExtResource("12_naqxq")
 
-[node name="Label3" type="Label" parent="Buttons/Settings"]
+[node name="Label3" type="Label" parent="MainMenu/Buttons/Settings"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -3.0
@@ -191,14 +193,14 @@ theme_override_font_sizes/font_size = 28
 text = "SETTINGS
 "
 
-[node name="Leave" type="Button" parent="Buttons"]
+[node name="Leave" type="Button" parent="MainMenu/Buttons"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 210.0
 offset_right = 98.0
 offset_bottom = 231.0
 
-[node name="Label3" type="Label" parent="Buttons/Leave"]
+[node name="Label3" type="Label" parent="MainMenu/Buttons/Leave"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = -3.0
@@ -208,15 +210,15 @@ theme_override_fonts/font = ExtResource("11_5bjlr")
 theme_override_font_sizes/font_size = 28
 text = "LEAVE"
 
-[node name="Labels" type="Node" parent="."]
+[node name="Labels" type="Node" parent="MainMenu"]
 
-[node name="Sprite2D4" type="Sprite2D" parent="Labels"]
+[node name="Sprite2D4" type="Sprite2D" parent="MainMenu/Labels"]
 position = Vector2(203, 42)
 rotation = 2.05635
 scale = Vector2(4, 4)
 texture = ExtResource("13_q5hjd")
 
-[node name="Label2" type="Label" parent="Labels"]
+[node name="Label2" type="Label" parent="MainMenu/Labels"]
 offset_left = 364.0
 offset_top = 290.0
 offset_right = 421.0
@@ -225,13 +227,13 @@ theme_override_fonts/font = ExtResource("14_r6ymo")
 theme_override_font_sizes/font_size = 10
 text = "V.1.0"
 
-[node name="Label" type="Label" parent="Labels"]
+[node name="Label" type="Label" parent="MainMenu/Labels"]
 offset_left = 154.0
 offset_top = 70.0
 offset_right = 194.0
 offset_bottom = 93.0
 
-[node name="Label4" type="Label" parent="Labels"]
+[node name="Label4" type="Label" parent="MainMenu/Labels"]
 offset_left = 2.0
 offset_top = 3.0
 offset_right = 272.0
@@ -242,7 +244,7 @@ theme_override_font_sizes/font_size = 64
 text = "TIME
 TASKER"
 
-[node name="Label3" type="Label" parent="Labels"]
+[node name="Label3" type="Label" parent="MainMenu/Labels"]
 offset_left = 7.0
 offset_top = 3.0
 offset_right = 151.0
@@ -252,71 +254,79 @@ theme_override_font_sizes/font_size = 64
 text = "TIME
 TASKER"
 
-[node name="Sprites" type="Node" parent="."]
+[node name="Sprites" type="Node" parent="MainMenu"]
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprites"]
+[node name="Sprite2D" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(301, 185)
 rotation = -0.769449
 scale = Vector2(4, 4)
 texture = ExtResource("15_yq7xy")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Sprites"]
+[node name="Sprite2D3" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(152, 287)
 rotation = 0.322659
 scale = Vector2(4, 4)
 texture = ExtResource("16_31hsw")
 
-[node name="Laser" type="Sprite2D" parent="Sprites"]
+[node name="Laser" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(288, 135)
 rotation = -0.723606
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_i84o2")
 
-[node name="Laser2" type="Sprite2D" parent="Sprites"]
+[node name="Laser2" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(256, 171)
 rotation = -0.769637
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_i84o2")
 
-[node name="Laser3" type="Sprite2D" parent="Sprites"]
+[node name="Laser3" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(199, 231)
 rotation = 0.317163
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_i84o2")
 
-[node name="Laser4" type="Sprite2D" parent="Sprites"]
+[node name="Laser4" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(142, 234)
 rotation = 0.336956
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_i84o2")
 
-[node name="Asteroid12" type="Sprite2D" parent="Sprites"]
+[node name="Asteroid12" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(99, 259)
 rotation = -0.619952
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("18_ow1pk")
 
-[node name="Asteroid7" type="Sprite2D" parent="Sprites"]
+[node name="Asteroid7" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(151, 137)
 rotation = -0.584509
 texture = ExtResource("19_84kgb")
 
-[node name="Asteroid1" type="Sprite2D" parent="Sprites"]
+[node name="Asteroid1" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(348, 77)
 rotation = 1.78808
 scale = Vector2(3, 3)
 texture = ExtResource("20_bxfs2")
 
-[node name="Asteroid8" type="Sprite2D" parent="Sprites"]
+[node name="Asteroid8" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(263, 10)
 texture = ExtResource("19_84kgb")
 
-[node name="Asteroid13" type="Sprite2D" parent="Sprites"]
+[node name="Asteroid13" type="Sprite2D" parent="MainMenu/Sprites"]
 position = Vector2(212, 198)
 rotation = 0.481042
 scale = Vector2(2, 2)
 texture = ExtResource("18_ow1pk")
 
-[connection signal="button_up" from="Buttons/Play" to="." method="_on_play_button_up"]
-[connection signal="button_up" from="Buttons/Credits" to="." method="_on_credits_button_up"]
-[connection signal="button_up" from="Buttons/Leave" to="." method="_on_leave_button_up"]
+[node name="Credits" parent="." instance=ExtResource("21_2kvha")]
+visible = false
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_thh64")
+autoplay = true
+
+[connection signal="button_up" from="MainMenu/Buttons/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="MainMenu/Buttons/Credits" to="." method="_on_credits_button_up"]
+[connection signal="button_up" from="MainMenu/Buttons/Leave" to="." method="_on_leave_button_up"]
+[connection signal="back_from_credits" from="Credits" to="." method="_on_credits_back_from_credits"]

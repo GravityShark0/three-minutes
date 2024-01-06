@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://chnh6iq10587l"]
+
+[ext_resource type="PackedScene" uid="uid://2whp5hi4d4d8" path="res://scenes/objects/base_ship.tscn" id="1_rgg6d"]
+[ext_resource type="Texture2D" uid="uid://c0j5lc64cpro" path="res://assets/ship/ship1.webp" id="2_dsdly"]
+[ext_resource type="PackedScene" uid="uid://ctqjd3o7cghm6" path="res://scenes/components/player_control.tscn" id="3_0dh47"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuuyh"]
+radius = 6.08276
+
+[node name="PlayerShip" instance=ExtResource("1_rgg6d")]
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("2_dsdly")
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CircleShape2D_yuuyh")
+
+[node name="ShipTimers" parent="." index="4"]
+hit_lag = 1.2
+
+[node name="PlayerControl" parent="." index="5" instance=ExtResource("3_0dh47")]

@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var speed: int = 1000
+@export var laser_owner: Ship
 var direction: Vector2 = Vector2.UP
 var laser_damage: int = 1
 
@@ -14,7 +15,7 @@ func _on_laser_timeout_timeout():
 
 
 func _on_body_entered(body: Node2D):
-	if not "player_health" in body:
+	if body != laser_owner:
 		if body.has_method("hit"):
 			body.hit(laser_damage)
 

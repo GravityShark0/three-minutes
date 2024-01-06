@@ -5,6 +5,9 @@ extends Camera2D
 
 ## Sets how much will the cursor lean off to the sides
 @export var offset_multiplier: int = 240
+## Sets how much will the cursor lean off vertically compared to the original offset_multiplier
+@export var vertical_offset_multiplier: float = 1.25
+
 var viewport = get_viewport()
 
 func _process(_delta):
@@ -16,7 +19,7 @@ func _process(_delta):
 	
 	if not(minimum.x < mouse_pos.x and mouse_pos.x < maximum.x and minimum.y < mouse_pos.y and mouse_pos.y < maximum.y):
 		drag_horizontal_offset = (mouse_pos.x - middle.x) / offset_multiplier
-		drag_vertical_offset = (mouse_pos.y - middle.y) / offset_multiplier
+		drag_vertical_offset = ((mouse_pos.y - middle.y) / offset_multiplier) * vertical_offset_multiplier
 	else:
 		drag_horizontal_offset = 0
 		drag_vertical_offset = 0
