@@ -5,11 +5,13 @@ extends Node
 var got_hit: bool = false
 
 func _process(_delta):
+	if ship.dashing:
+		return
 	if got_hit:
 		ship.visible = not ship.visible
 
-	if ship.dashing:
-		return
+		
+	$"../Sprites/GunPivot".look_at($"../Sprites/GunPivot".get_global_mouse_position())
 
 	var direction = Input.get_vector("left", "right", "up", "down")
 
@@ -23,7 +25,7 @@ func _process(_delta):
 	if Input.is_action_pressed("shift"):
 		ship.slow_move()
 
-	ship.look_at(ship.get_global_mouse_position())
+
 	
 func _physics_process(_delta):
 	if Input.is_action_pressed("primary") and ship.can_primary:

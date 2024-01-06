@@ -48,6 +48,7 @@ script = ExtResource("1_b6mw5")
 libraries = {
 "": SubResource("AnimationLibrary_lg8ax")
 }
+autoplay = "Time blaring"
 
 [node name="TimeRemaining" type="Label" parent="."]
 anchors_preset = 2

@@ -11,9 +11,21 @@ script = ExtResource("1_wdmor")
 
 [node name="ShipEffects" parent="." instance=ExtResource("2_lv8wo")]
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
 position = Vector2(-1, 0)
 rotation = 1.5708
+
+[node name="Flame" type="AnimatedSprite2D" parent="Sprites"]
+
+[node name="Nozzle" type="Sprite2D" parent="Sprites"]
+
+[node name="GunPivot" type="Node2D" parent="Sprites"]
+position = Vector2(-3.63588e-06, -1)
+rotation = -1.5708
+
+[node name="Gun" type="Sprite2D" parent="Sprites/GunPivot"]
+
+[node name="Body" type="Sprite2D" parent="Sprites"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
