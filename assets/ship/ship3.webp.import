@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d34g47up5oo4u"
-path="res://.godot/imported/energyball2.webp-16972ebb27ecd7d2a2df609ae35d3910.ctex"
+uid="uid://bnaoaesjf6agk"
+path="res://.godot/imported/ship3.webp-4a23f771ae44b00ebc41d1b1bd7410cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/energyball2.webp"
-dest_files=["res://.godot/imported/energyball2.webp-16972ebb27ecd7d2a2df609ae35d3910.ctex"]
+source_file="res://assets/ship/ship3.webp"
+dest_files=["res://.godot/imported/ship3.webp-4a23f771ae44b00ebc41d1b1bd7410cd.ctex"]
 
 [params]
 

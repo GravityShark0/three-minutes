@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4angr2eqia3u"]
 
 [ext_resource type="Script" path="res://scripts/objects/grenade.gd" id="1_u5ji4"]
-[ext_resource type="Texture2D" uid="uid://cgqe65dfqt8gr" path="res://assets/bomb.png" id="2_ajdxf"]
+[ext_resource type="Texture2D" uid="uid://cgqe65dfqt8gr" path="res://assets/ship/bomb.png" id="2_ajdxf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dpebn"]
 friction = 0.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3f3h8gvn0108"
-path="res://.godot/imported/energyball4.webp-9feb1f586c47f25ce48b183344598774.ctex"
+uid="uid://cijt0kqryr45b"
+path="res://.godot/imported/energyball3.webp-3ddf75d93705a83111106adc1c2c9bc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/energyball4.webp"
-dest_files=["res://.godot/imported/energyball4.webp-9feb1f586c47f25ce48b183344598774.ctex"]
+source_file="res://assets/objects/energyball3.webp"
+dest_files=["res://.godot/imported/energyball3.webp-3ddf75d93705a83111106adc1c2c9bc4.ctex"]
 
 [params]
 

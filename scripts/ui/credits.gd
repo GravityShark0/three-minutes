@@ -4,7 +4,7 @@ extends Node
 signal back_from_credits
 
 func _input(event):
-	if Input.is_action_just_pressed("burger"):
+	if event.is_action_pressed("burger"):
 		$burger.visible = not $burger.visible
 
 

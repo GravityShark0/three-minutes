@@ -1,36 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2q8d16qp7iob"]
+[gd_scene load_steps=7 format=3 uid="uid://d2q8d16qp7iob"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hm32l"]
-[ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://scenes/objects/player.tscn" id="1_qyirn"]
 [ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://scenes/ui/ui.tscn" id="2_ah4l3"]
-[ext_resource type="Script" path="res://scripts/Upgrades.gd" id="2_wagps"]
 [ext_resource type="PackedScene" uid="uid://o1ex3rkkkl4e" path="res://scenes/ui/upgrade/upgrade.tscn" id="3_2scnu"]
 [ext_resource type="PackedScene" uid="uid://cmi0br8uamtcw" path="res://scenes/objects/background.tscn" id="3_71btw"]
-[ext_resource type="Script" path="res://scripts/objects/camera.gd" id="5_w8y54"]
+[ext_resource type="PackedScene" uid="uid://chnh6iq10587l" path="res://scenes/objects/player_ship.tscn" id="5_5n0jl"]
+[ext_resource type="PackedScene" uid="uid://nmv5brnf2ac6" path="res://scenes/objects/camera_2d.tscn" id="6_pri73"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_hm32l")
 metadata/_edit_vertical_guides_ = [431.0]
 
-[node name="Upgrades" type="Node" parent="."]
-script = ExtResource("2_wagps")
+[node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
+position = Vector2(-3, -14)
+background_anchor_point = NodePath("../Ships/PlayerShip")
 
 [node name="UI" parent="." instance=ExtResource("2_ah4l3")]
 
 [node name="Upgrade" parent="UI" instance=ExtResource("3_2scnu")]
 visible = false
 
-[node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
-position = Vector2(-3, -14)
-background_anchor_point = NodePath("../Player")
+[node name="Ships" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("1_qyirn")]
+[node name="PlayerShip" parent="Ships" instance=ExtResource("5_5n0jl")]
 unique_name_in_owner = true
+speed = 150
+slow_speed_divisor = 2
+dash_speed = 300
+ship_health = 3
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position_smoothing_enabled = true
-position_smoothing_speed = 15.0
-script = ExtResource("5_w8y54")
+[node name="Camera2D" parent="Ships/PlayerShip" instance=ExtResource("6_pri73")]
+position = Vector2(0, -1)
 
 [node name="Projectiles" type="Node2D" parent="."]
 
@@ -41,6 +41,3 @@ one_shot = true
 autostart = true
 
 [connection signal="dead" from="UI" to="UI" method="_on_dead"]
-[connection signal="button_pressed" from="UI/Upgrade" to="Upgrades" method="_on_upgrade_button_pressed"]
-[connection signal="after_death" from="Player" to="." method="_on_player_after_death"]
-[connection signal="primary_fire" from="Player" to="." method="_on_player_primary_fire"]

@@ -14,7 +14,7 @@ config/name="Three-minutes"
 run/main_scene="res://scenes/ui/menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/show_image=false
-config/icon="res://assets/energyball3.webp"
+config/icon="res://assets/objects/energyball3.webp"
 
 [display]
 
@@ -23,7 +23,7 @@ window/size/viewport_height=300
 window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://assets/crosshair.png"
+mouse_cursor/custom_image="res://assets/ui/crosshair.png"
 mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 mouse_cursor/tooltip_position_offset=Vector2(8, 8)
 

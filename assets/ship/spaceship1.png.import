@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu5o7a6obttd2"
-path="res://.godot/imported/spaceship.webp-442a4f4d5ab17d2a96ef7bfd9ab6dc2d.ctex"
+uid="uid://t2jrn7hpo3o5"
+path="res://.godot/imported/spaceship1.png-1f2623e56fcd50192f0f21d1469b2fd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/splitted ffrom tilemap/spaceship.webp"
-dest_files=["res://.godot/imported/spaceship.webp-442a4f4d5ab17d2a96ef7bfd9ab6dc2d.ctex"]
+source_file="res://assets/ship/spaceship1.png"
+dest_files=["res://.godot/imported/spaceship1.png-1f2623e56fcd50192f0f21d1469b2fd4.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

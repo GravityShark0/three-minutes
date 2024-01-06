@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cijt0kqryr45b"
-path="res://.godot/imported/energyball3.webp-34feeb694722db68eea03cccca1417d3.ctex"
+uid="uid://cf4pjsq20246g"
+path="res://.godot/imported/asteroids.webp-d74913b0cea0812a28b6c0d565d86b44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/energyball3.webp"
-dest_files=["res://.godot/imported/energyball3.webp-34feeb694722db68eea03cccca1417d3.ctex"]
+source_file="res://assets/objects/asteroids.webp"
+dest_files=["res://.godot/imported/asteroids.webp-d74913b0cea0812a28b6c0d565d86b44.ctex"]
 
 [params]
 

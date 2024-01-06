@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci7mp77u4ndw1"
-path="res://.godot/imported/asteroid7.png-c030197d40e0648f0b2e3a8fca84f212.ctex"
+path="res://.godot/imported/asteroid7.png-7d4f76beb2cd6a78eb96a58e8799de0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/splitted ffrom tilemap/asteroid7.png"
-dest_files=["res://.godot/imported/asteroid7.png-c030197d40e0648f0b2e3a8fca84f212.ctex"]
+source_file="res://assets/objects/asteroid7.png"
+dest_files=["res://.godot/imported/asteroid7.png-7d4f76beb2cd6a78eb96a58e8799de0b.ctex"]
 
 [params]
 

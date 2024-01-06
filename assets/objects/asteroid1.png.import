@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4k3grarllryj"
-path="res://.godot/imported/asteroid12.png-22af8f28dfa46930a05d0771d0b698b7.ctex"
+uid="uid://c1tw01kwn0naq"
+path="res://.godot/imported/asteroid1.png-06ac1446f6e66a239b56a4f390e84b35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/splitted ffrom tilemap/asteroid12.png"
-dest_files=["res://.godot/imported/asteroid12.png-22af8f28dfa46930a05d0771d0b698b7.ctex"]
+source_file="res://assets/objects/asteroid1.png"
+dest_files=["res://.godot/imported/asteroid1.png-06ac1446f6e66a239b56a4f390e84b35.ctex"]
 
 [params]
 

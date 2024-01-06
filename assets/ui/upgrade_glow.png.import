@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b520c5jfio6cf"
-path="res://.godot/imported/upgrade_glow.png-274e7630dc054b67fdc7ff32b28d5736.ctex"
+path="res://.godot/imported/upgrade_glow.png-5de6bf32cde644e93de51c4079836736.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrade_glow.png"
-dest_files=["res://.godot/imported/upgrade_glow.png-274e7630dc054b67fdc7ff32b28d5736.ctex"]
+source_file="res://assets/ui/upgrade_glow.png"
+dest_files=["res://.godot/imported/upgrade_glow.png-5de6bf32cde644e93de51c4079836736.ctex"]
 
 [params]
 

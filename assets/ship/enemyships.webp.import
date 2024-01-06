@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf4pjsq20246g"
-path="res://.godot/imported/asteroids.webp-ea3afac4df1ba43345e330de4974471f.ctex"
+uid="uid://umpyldpslt2y"
+path="res://.godot/imported/enemyships.webp-97917ee1bea783e83ad792361235a75c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/asteroids.webp"
-dest_files=["res://.godot/imported/asteroids.webp-ea3afac4df1ba43345e330de4974471f.ctex"]
+source_file="res://assets/ship/enemyships.webp"
+dest_files=["res://.godot/imported/enemyships.webp-97917ee1bea783e83ad792361235a75c.ctex"]
 
 [params]
 

@@ -6,7 +6,7 @@ extends Camera2D
 ## Sets how much will the cursor lean off to the sides
 @export var offset_multiplier: int = 240
 ## Sets how much will the cursor lean off vertically compared to the original offset_multiplier
-@export var vertical_offset_multiplier: float = 2
+@export var vertical_offset_multiplier: float = 1.25
 
 var viewport = get_viewport()
 
