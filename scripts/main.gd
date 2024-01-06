@@ -18,8 +18,15 @@ func _on_player_primary_fire(node, pos, direction):
 	else:
 		print('ass')
 
+func _ready():
+	var current_scene = get_tree().get_current_scene()
+
+	if current_scene.get_name() == "Main":
+		Sound.stop()
+
 
 func _process(_delta):
+	Sound.stop()
 	difficulty += difficulty_increase
 	var random_check = randi_range(0, int(50 / difficulty))
 	# var random_check = 0
