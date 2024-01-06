@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://5dneig8ei6xs"]
+[gd_scene load_steps=32 format=3 uid="uid://5dneig8ei6xs"]
 
 [ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_2ukjd"]
 [ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="2_l86e2"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ci7mp77u4ndw1" path="res://assets/objects/asteroid7.png" id="19_84kgb"]
 [ext_resource type="Texture2D" uid="uid://c1tw01kwn0naq" path="res://assets/objects/asteroid1.png" id="20_bxfs2"]
 [ext_resource type="PackedScene" uid="uid://b5bfc5c56k4fj" path="res://scenes/ui/credits.tscn" id="21_2kvha"]
+[ext_resource type="PackedScene" uid="uid://dd8plwh1gg6kk" path="res://scenes/ui/settings.tscn" id="22_pserw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vioj"]
 texture = ExtResource("2_l86e2")
@@ -325,6 +326,8 @@ visible = false
 [node name="Theme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_thh64")
 autoplay = true
+
+[node name="Settings" parent="." instance=ExtResource("22_pserw")]
 
 [connection signal="button_up" from="MainMenu/Buttons/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="MainMenu/Buttons/Credits" to="." method="_on_credits_button_up"]
