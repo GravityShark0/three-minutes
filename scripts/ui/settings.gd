@@ -1,38 +1,41 @@
 extends Node
 
-var music_bus = AudioServer.get_bus_index("Master")
-
-#febs cooking place cause he doesnt knwo where ot cook anymore
+var master = AudioServer.get_bus_index("Master")
+var music = AudioServer.get_bus_index("Music")
+var sfx = AudioServer.get_bus_index("SFX")
 
 signal back_from_settings
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func _on_leave_button_up():
 	back_from_settings.emit()
 
-
-func _on_master_value_changed(value):
-	volume(0, value)
-
 func volume(bus_index, value):
 	AudioServer.set_bus_volume_db(bus_index, value)
+func mute(bus_index, value):
+	AudioServer.set_bus_mute(bus_index, value)
 
+func _on_master_value_changed(value):
+	if value == -6:
+		mute(master, true)
+	else:
+		mute(master, false)
+		volume(master, value)
 
 func _on_sound_fx_value_changed(value):
-	volume(2, value)
+	if value == -6:
+		mute(sfx, true)
+	else:
+		mute(sfx, false)
+		volume(sfx, value)
+
+func _on_music_value_changed(value):
+	if value == -6:
+		mute(music, true)
+	else:
+		mute(music, false)
+		volume(music, value)
 
 
-func _on_button_pressed():
-	AudioServer.set_bus_mute(music_bus, not AudioServer.is_bus_mute(music_bus))
-
-
-func _on_sprite_button_button_up():
+func _on_sprite_button_pressed():
 	$Sprites.visible = not $Sprites.visible

@@ -7,7 +7,6 @@ extends Node2D
 # const OUTWARD_LIMIT: int = Vector2(450, 350)
 
 var laser_scene: PackedScene = preload("res://scenes/objects/laser.tscn")
-var grenade_scene: PackedScene = preload("res://scenes/objects/grenade.tscn")
 var asteroid_scene: PackedScene = preload("res://scenes/objects/asteroid.tscn")
 
 func _ready():

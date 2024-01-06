@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o1ex3rkkkl4e"]
 
-[ext_resource type="Script" path="res://scripts/ui/upgrademenu.gd" id="1_84r8l"]
+[ext_resource type="Script" path="res://scripts/ui/upgrade_menu.gd" id="1_b5ne4"]
 [ext_resource type="PackedScene" uid="uid://b6xw6cpd872ld" path="res://scenes/ui/upgrade/upgrade_button.tscn" id="2_w8f14"]
 
 [node name="Upgrade" type="ColorRect"]
@@ -17,7 +17,7 @@ offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.223529, 0.223529, 0.223529, 0.466667)
-script = ExtResource("1_84r8l")
+script = ExtResource("1_b5ne4")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1

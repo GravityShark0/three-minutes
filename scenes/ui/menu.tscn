@@ -308,6 +308,7 @@ visible = false
 [node name="Theme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_thh64")
 autoplay = true
+bus = &"Music"
 
 [connection signal="button_up" from="MainMenu/Buttons/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="MainMenu/Buttons/Credits" to="." method="_on_credits_button_up"]
