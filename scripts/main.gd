@@ -70,9 +70,6 @@ func _process(_delta):
 
 func _on_player_after_death():
 	get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
-	pass  # Replace with function body.
-
-
 
 func _on_upgrade_button_pressed(example):
 	print(example)

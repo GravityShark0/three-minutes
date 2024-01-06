@@ -44,6 +44,7 @@ func _process(_delta):
 	move_and_slide()
 	look_at(get_global_mouse_position())
 
+func _physics_process(delta):
 	if Input.is_action_pressed("primary") and can_primary:
 		can_primary = false
 		$ShipTimers/Primary.start()

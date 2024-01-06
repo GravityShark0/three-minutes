@@ -100,10 +100,6 @@ sources/7 = SubResource("TileSetAtlasSource_3njcb")
 [node name="Menu" type="Node"]
 script = ExtResource("1_2ukjd")
 
-[node name="Theme" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_thh64")
-autoplay = true
-
 [node name="MainMenu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -325,6 +321,10 @@ texture = ExtResource("18_ow1pk")
 
 [node name="Credits" parent="." instance=ExtResource("21_2kvha")]
 visible = false
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_thh64")
+autoplay = true
 
 [connection signal="button_up" from="MainMenu/Buttons/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="MainMenu/Buttons/Credits" to="." method="_on_credits_button_up"]

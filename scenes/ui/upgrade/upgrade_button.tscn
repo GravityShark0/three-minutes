@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6xw6cpd872ld"]
+
+[ext_resource type="Script" path="res://scripts/ui/upgrade_button.gd" id="1_pi6tl"]
+[ext_resource type="Texture2D" uid="uid://b520c5jfio6cf" path="res://assets/upgrade_glow.png" id="2_dq4va"]
+
+[node name="UpgradeButton" type="Control"]
+custom_minimum_size = Vector2(115, 3224)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 115.0
+offset_bottom = 3224.0
+script = ExtResource("1_pi6tl")
+value = null
+max_value = null
+normal = ExtResource("2_dq4va")
+pressed = ExtResource("2_dq4va")
+hover = ExtResource("2_dq4va")
+disabled = ExtResource("2_dq4va")
+focused = ExtResource("2_dq4va")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_top = 14.0
+offset_right = 16.0
+offset_bottom = 46.0
+grow_horizontal = 2
+texture_normal = ExtResource("2_dq4va")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="OutOf" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

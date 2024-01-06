@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://scenes/objects/player.tscn" id="1_qyirn"]
 [ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://scenes/ui/ui.tscn" id="2_ah4l3"]
 [ext_resource type="Script" path="res://scripts/Upgrades.gd" id="2_wagps"]
-[ext_resource type="PackedScene" uid="uid://o1ex3rkkkl4e" path="res://scenes/ui/upgrade.tscn" id="3_2scnu"]
+[ext_resource type="PackedScene" uid="uid://o1ex3rkkkl4e" path="res://scenes/ui/upgrade/upgrade.tscn" id="3_2scnu"]
 [ext_resource type="PackedScene" uid="uid://cmi0br8uamtcw" path="res://scenes/objects/background.tscn" id="3_71btw"]
 [ext_resource type="Script" path="res://scripts/objects/camera.gd" id="5_w8y54"]
 
