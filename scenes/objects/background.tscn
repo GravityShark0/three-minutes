@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmi0br8uamtcw"]
+
+[ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="1_wx133"]
+[ext_resource type="Texture2D" uid="uid://b873cqo4f7aov" path="res://assets/stars/stars_tileset.webp" id="2_ktofy"]
+[ext_resource type="Script" path="res://scripts/objects/background.gd" id="3_cem7m"]
+[ext_resource type="Texture2D" uid="uid://b661v4e24o53g" path="res://assets/stars/noise_space.webp" id="3_temy7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw22w"]
+texture = ExtResource("1_wx133")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g44k3"]
+texture = ExtResource("2_ktofy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_io3of"]
+texture = ExtResource("3_temy7")
+0:0/next_alternative_id = 5
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+1:0/next_alternative_id = 4
+1:0/0 = 0
+1:0/1 = 1
+1:0/1/flip_h = true
+1:0/2 = 2
+1:0/2/flip_v = true
+1:0/3 = 3
+1:0/3/flip_h = true
+1:0/3/flip_v = true
+2:0/next_alternative_id = 4
+2:0/0 = 0
+2:0/1 = 1
+2:0/1/flip_h = true
+2:0/2 = 2
+2:0/2/flip_v = true
+2:0/3 = 3
+2:0/3/flip_h = true
+2:0/3/flip_v = true
+3:0/next_alternative_id = 4
+3:0/0 = 0
+3:0/1 = 1
+3:0/1/flip_h = true
+3:0/2 = 2
+3:0/2/flip_v = true
+3:0/3 = 3
+3:0/3/flip_h = true
+3:0/3/flip_v = true
+4:0/next_alternative_id = 4
+4:0/0 = 0
+4:0/1 = 1
+4:0/1/flip_h = true
+4:0/2 = 2
+4:0/2/flip_v = true
+4:0/3 = 3
+4:0/3/flip_h = true
+4:0/3/flip_v = true
+5:0/next_alternative_id = 4
+5:0/0 = 0
+5:0/1 = 1
+5:0/1/flip_h = true
+5:0/2 = 2
+5:0/2/flip_v = true
+5:0/3 = 3
+5:0/3/flip_h = true
+5:0/3/flip_v = true
+6:0/next_alternative_id = 4
+6:0/0 = 0
+6:0/1 = 1
+6:0/1/flip_h = true
+6:0/2 = 2
+6:0/2/flip_v = true
+6:0/3 = 3
+6:0/3/flip_h = true
+6:0/3/flip_v = true
+7:0/next_alternative_id = 4
+7:0/0 = 0
+7:0/1 = 1
+7:0/1/flip_h = true
+7:0/2 = 2
+7:0/2/flip_v = true
+7:0/3 = 3
+7:0/3/flip_h = true
+7:0/3/flip_v = true
+
+[sub_resource type="TileSet" id="TileSet_kfhsf"]
+sources/0 = SubResource("TileSetAtlasSource_tw22w")
+sources/1 = SubResource("TileSetAtlasSource_g44k3")
+sources/2 = SubResource("TileSetAtlasSource_io3of")
+
+[node name="Background" type="TileMap"]
+position = Vector2(-3, 1)
+tile_set = SubResource("TileSet_kfhsf")
+format = 2
+layer_0/name = "black"
+layer_0/tile_data = PackedInt32Array(0, 0, 0)
+script = ExtResource("3_cem7m")

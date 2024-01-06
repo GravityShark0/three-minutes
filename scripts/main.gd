@@ -4,9 +4,9 @@ extends Node2D
 @export var difficulty_increase: float = 0.001
 # const OUTWARD_LIMIT: int = Vector2(450, 350)
 
-var laser_scene: PackedScene = preload("res://scenes/laser.tscn")
-var grenade_scene: PackedScene = preload("res://scenes/grenade.tscn")
-var asteroid_scene: PackedScene = preload("res://scenes/asteroid.tscn")
+var laser_scene: PackedScene = preload("res://scenes/objects/laser.tscn")
+var grenade_scene: PackedScene = preload("res://scenes/objects/grenade.tscn")
+var asteroid_scene: PackedScene = preload("res://scenes/objects/asteroid.tscn")
 
 func _on_player_primary_fire(node, pos, direction):
 	if node is Player:
@@ -21,12 +21,12 @@ func _on_player_primary_fire(node, pos, direction):
 func _ready():
 	var current_scene = get_tree().get_current_scene()
 
-	if current_scene.get_name() == "Main":
-		Sound.stop()
+	# if current_scene.get_name() == "Main":
+		# Sound.stop()
 
 
 func _process(_delta):
-	Sound.stop()
+	# Sound.stop()
 	difficulty += difficulty_increase
 	var random_check = randi_range(0, int(50 / difficulty))
 	# var random_check = 0
@@ -69,8 +69,10 @@ func _process(_delta):
 
 
 func _on_player_after_death():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
 	pass  # Replace with function body.
 
 
 
+func _on_upgrade_button_pressed(example):
+	print(example)

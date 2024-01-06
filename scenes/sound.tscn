@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0t34ikxy6wmw"]
-
-[ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="1_o446m"]
-
-[node name="fire" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_o446m")
-autoplay = true
