@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2q8d16qp7iob"]
+[gd_scene load_steps=8 format=3 uid="uid://d2q8d16qp7iob"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hm32l"]
 [ext_resource type="PackedScene" uid="uid://4w5ymnvc7j2c" path="res://scenes/player.tscn" id="1_qyirn"]
 [ext_resource type="PackedScene" uid="uid://bndu74dsmbmdb" path="res://scenes/ui.tscn" id="2_ah4l3"]
+[ext_resource type="PackedScene" uid="uid://o1ex3rkkkl4e" path="res://scenes/Upgrade.tscn" id="3_2scnu"]
 [ext_resource type="PackedScene" uid="uid://cmi0br8uamtcw" path="res://scenes/background.tscn" id="3_71btw"]
+[ext_resource type="Script" path="res://scripts/upgrademenu.gd" id="4_ny6vj"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="5_w8y54"]
 
 [node name="Main" type="Node2D"]
@@ -12,6 +14,10 @@ script = ExtResource("1_hm32l")
 metadata/_edit_vertical_guides_ = [431.0]
 
 [node name="UI" parent="." instance=ExtResource("2_ah4l3")]
+
+[node name="Upgrade" parent="UI" instance=ExtResource("3_2scnu")]
+visible = false
+script = ExtResource("4_ny6vj")
 
 [node name="Background" parent="." node_paths=PackedStringArray("background_anchor_point") instance=ExtResource("3_71btw")]
 position = Vector2(-3, -14)
