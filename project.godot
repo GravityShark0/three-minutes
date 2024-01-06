@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/show_image=false
 config/icon="res://assets/energyball3.webp"
 
+[autoload]
+
+Sound="*res://scenes/ui/menu_sound.tscn"
+
 [display]
 
 window/size/viewport_width=400
@@ -107,5 +111,5 @@ burger={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
 textures/default_filters/anisotropic_filtering_level=0

@@ -4,7 +4,7 @@ extends Node
 func _ready(): #just cooked osmething
 	var current_scene = get_tree().get_current_scene()
 	if current_scene.get_name() == "Menu":
-		$Theme.play()
+		Sound.play()
 
 #menu button / play
 func _on_play_button_up():

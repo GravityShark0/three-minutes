@@ -21,8 +21,8 @@ func _on_player_primary_fire(node, pos, direction):
 func _ready():
 	var current_scene = get_tree().get_current_scene()
 
-	# if current_scene.get_name() == "Main":
-		# Sound.stop()
+	if current_scene.get_name() == "Main":
+		Sound.stop()
 
 
 func _process(_delta):
