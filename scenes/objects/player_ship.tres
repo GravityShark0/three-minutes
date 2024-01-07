@@ -53,7 +53,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dash",
-"speed": 5.0
+"speed": 32.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -78,5 +78,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"thrust",
-"speed": 5.0
+"speed": 32.0
 }]

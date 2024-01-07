@@ -1,7 +1,7 @@
-extends Node
+extends Node2D
 
 # We are going to assume that you put this component as a child of a ship and a ship only
-@onready var ship = get_node("../")
+@onready var ship = get_parent()
 var got_hit: bool = false
 
 func _process(_delta):
@@ -11,7 +11,7 @@ func _process(_delta):
 		ship.visible = not ship.visible
 
 		
-	$"../Sprites/GunPivot".look_at($"../Sprites/GunPivot".get_global_mouse_position())
+	ship.get_node("Sprites/GunPivot").look_at(get_global_mouse_position())
 
 	var direction = Input.get_vector("left", "right", "up", "down")
 
@@ -21,7 +21,7 @@ func _process(_delta):
 		ship.move(direction)
 	else:
 		ship.move(Vector2.ZERO)
-		$"../Sprites/Flame".play("offthrust")
+		ship.get_node("Sprites/Flame").play("offthrust")
 
 	if Input.is_action_pressed("shift"):
 		ship.slow_move()
