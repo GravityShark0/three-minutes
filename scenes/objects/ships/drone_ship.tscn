@@ -1,6 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://diwo1cg5dwabe"]
 
-[ext_resource type="Script" path="res://scripts/objects/components/ai/drone_ai.gd" id="1_c5ali"]
+[ext_resource type="Script" path="res://scripts/objects/drone_ship.gd" id="1_1kl65"]
 
-[node name="DroneAI" type="Node"]
-script = ExtResource("1_c5ali")
+[node name="DroneShip" type="Area2D"]
+script = ExtResource("1_1kl65")
+speed = null
+direction = null
+rotation_speed = null

@@ -11,16 +11,13 @@ var asteroid_scene: PackedScene = preload("res://scenes/objects/asteroid.tscn")
 
 func _ready():
 	%PlayerShip.primary_fire.connect(_on_primary_fire)
+	%PlayerShip.after_death.connect(_after_death)
 
-
-func _on_primary_fire(node, pos, direction):
-	if node is Ship:
-		var laser = laser_scene.instantiate() as Area2D
+func _on_primary_fire(laser_info: ProjectileTemplate):
+	if laser_info.parent is Ship:
+		var laser = laser_scene.instantiate() as Projectile
 		$Projectiles.add_child(laser)
-		laser.laser_owner = node
-		laser.global_position = pos
-		laser.rotation = direction.angle()
-		laser.direction = direction
+		laser.setup(laser_info)
 
 
 func _process(_delta):
@@ -68,5 +65,8 @@ func _process(_delta):
 func _on_upgrade_button_pressed(example):
 	print(example)
 
-func _on_player_ship_after_death():
+func _after_death():
 	get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
+
+
+

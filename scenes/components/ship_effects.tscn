@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://dnmtvxqvfbikb"]
+[gd_scene load_steps=20 format=3 uid="uid://dnmtvxqvfbikb"]
 
-[ext_resource type="Script" path="res://scripts/objects/components/ship_effects.gd" id="1_kmoad"]
+[ext_resource type="Script" path="res://scripts/components/ship_effects.gd" id="1_eqycs"]
 
 [sub_resource type="Gradient" id="Gradient_3kioq"]
 offsets = PackedFloat32Array(0.00943396, 0.561321)
@@ -99,23 +99,8 @@ color = Color(1, 0.368627, 0, 1)
 color_ramp = SubResource("GradientTexture1D_aca3a")
 hue_variation_max = 0.21
 
-[sub_resource type="Gradient" id="Gradient_imdb1"]
-offsets = PackedFloat32Array(0, 0.988095)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_cv8es"]
-gradient = SubResource("Gradient_imdb1")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ukn81"]
-particle_flag_disable_z = true
-initial_velocity_min = 100.0
-initial_velocity_max = 100.0
-gravity = Vector3(0, 0, 0)
-color = Color(1, 0, 0, 1)
-color_ramp = SubResource("GradientTexture1D_cv8es")
-
 [node name="ShipEffects" type="Node2D"]
-script = ExtResource("1_kmoad")
+script = ExtResource("1_eqycs")
 
 [node name="Dash" type="GPUParticles2D" parent="."]
 emitting = false
@@ -151,15 +136,5 @@ speed_scale = 3.0
 explosiveness = 1.0
 randomness = 1.0
 trail_enabled = true
-
-[node name="Shoot" type="GPUParticles2D" parent="."]
-position = Vector2(3, 0)
-emitting = false
-amount = 12
-process_material = SubResource("ParticleProcessMaterial_ukn81")
-lifetime = 0.3
-one_shot = true
-speed_scale = 3.0
-explosiveness = 1.0
 
 [connection signal="finished" from="Explode" to="." method="_on_explode_finished"]

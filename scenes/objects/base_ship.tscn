@@ -1,41 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://2whp5hi4d4d8"]
+[gd_scene load_steps=8 format=3 uid="uid://2whp5hi4d4d8"]
 
 [ext_resource type="Script" path="res://scripts/objects/player.gd" id="1_wdmor"]
 [ext_resource type="PackedScene" uid="uid://dnmtvxqvfbikb" path="res://scenes/components/ship_effects.tscn" id="2_lv8wo"]
 [ext_resource type="SpriteFrames" uid="uid://4ubpa3mqofto" path="res://scenes/objects/player_ship.tres" id="3_6ddbp"]
 [ext_resource type="PackedScene" uid="uid://tmmd7lcqoful" path="res://scenes/components/ship_timers.tscn" id="3_7jb21"]
 
-[node name="BaseShip" type="CharacterBody2D"]
+[sub_resource type="Gradient" id="Gradient_7e8pn"]
+offsets = PackedFloat32Array(0, 0.988095)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cv8es"]
+gradient = SubResource("Gradient_7e8pn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rsrbi"]
+particle_flag_disable_z = true
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+color = Color(1, 0, 0, 1)
+color_ramp = SubResource("GradientTexture1D_cv8es")
+
+[node name="PlayerShip" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_wdmor")
 
 [node name="ShipEffects" parent="." instance=ExtResource("2_lv8wo")]
 
-[node name="Sprites" type="Node2D" parent="."]
-position = Vector2(-1, 0)
-rotation = 1.5708
+[node name="GunPivot" type="Node2D" parent="."]
 
-[node name="Flame" type="AnimatedSprite2D" parent="Sprites"]
+[node name="Gun" type="Sprite2D" parent="GunPivot"]
+
+[node name="ShootPoint" type="Marker2D" parent="GunPivot"]
+position = Vector2(6, 2.50498e-05)
+
+[node name="Shoot" type="GPUParticles2D" parent="GunPivot"]
+position = Vector2(6, 3.59217e-06)
+emitting = false
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_rsrbi")
+lifetime = 0.3
+one_shot = true
+speed_scale = 3.0
+explosiveness = 1.0
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="Flame" type="AnimatedSprite2D" parent="Body"]
 sprite_frames = ExtResource("3_6ddbp")
 animation = &"offthrust"
 
-[node name="Nozzle" type="Sprite2D" parent="Sprites"]
+[node name="Nozzle" type="Sprite2D" parent="Body"]
 
-[node name="GunPivot" type="Node2D" parent="Sprites"]
-position = Vector2(-3.63588e-06, -1)
-rotation = -1.5708
-
-[node name="Gun" type="Sprite2D" parent="Sprites/GunPivot"]
-
-[node name="Body" type="Sprite2D" parent="Sprites"]
+[node name="Body" type="Sprite2D" parent="Body"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-[node name="ShootPoint" type="Marker2D" parent="."]
-position = Vector2(6, 0)
-rotation = 1.5708
-
 [node name="ShipTimers" parent="." instance=ExtResource("3_7jb21")]
+hit_lag = 1.2
 
 [connection signal="after_explode" from="ShipEffects" to="." method="_on_ship_effects_after_explode"]
 [connection signal="dash_cooldown_timeout" from="ShipTimers" to="." method="_on_ship_timers_dash_cooldown_timeout"]
