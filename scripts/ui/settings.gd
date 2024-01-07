@@ -39,3 +39,8 @@ func _on_music_value_changed(value):
 
 func _on_sprite_button_pressed():
 	$Sprites.visible = not $Sprites.visible
+	ButtonClick.play()
+
+
+func _on_leave_pressed():
+	ButtonClick.play()

@@ -142,3 +142,4 @@ scale = Vector2(0.23, 0.104444)
 texture = ExtResource("8_do50p")
 
 [connection signal="button_up" from="Leave" to="." method="_on_leave_button_up"]
+[connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

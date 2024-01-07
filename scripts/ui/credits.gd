@@ -10,3 +10,6 @@ func _input(event):
 
 func _on_leave_button_up():
 	back_from_credits.emit()
+
+func _on_leave_pressed():
+	ButtonClick.play()
