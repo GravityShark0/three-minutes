@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://5dneig8ei6xs"]
+[gd_scene load_steps=33 format=3 uid="uid://5dneig8ei6xs"]
 
 [ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_2ukjd"]
 [ext_resource type="Texture2D" uid="uid://bvfyf487n0el3" path="res://assets/stars/black.png" id="2_l86e2"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c5m8gbofbgxgy" path="res://assets/stars/3SPACETILESET3.png" id="7_gx0jw"]
 [ext_resource type="Texture2D" uid="uid://dhwalnol3cfkn" path="res://assets/stars/4SPACETILESET4.png" id="8_610fa"]
 [ext_resource type="Texture2D" uid="uid://b8qh4u5bedogt" path="res://assets/stars/5SPACETILESET5.png" id="9_llbt5"]
-[ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/fire.wav" id="10_thh64"]
+[ext_resource type="AudioStream" uid="uid://c1gh5h513fpbh" path="res://assets/audio/fire.wav" id="10_thh64"]
 [ext_resource type="FontFile" uid="uid://s0362j5y7c1h" path="res://assets/font/hf/FutilePro.ttf" id="11_5bjlr"]
 [ext_resource type="Texture2D" uid="uid://fl5bckc5nsox" path="res://assets/button/border.png" id="12_naqxq"]
 [ext_resource type="Texture2D" uid="uid://t2jrn7hpo3o5" path="res://assets/ship/spaceship1.png" id="13_q5hjd"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c1tw01kwn0naq" path="res://assets/objects/asteroid1.png" id="20_bxfs2"]
 [ext_resource type="PackedScene" uid="uid://b5bfc5c56k4fj" path="res://scenes/ui/credits.tscn" id="21_2kvha"]
 [ext_resource type="PackedScene" uid="uid://dd8plwh1gg6kk" path="res://scenes/ui/settings.tscn" id="22_pserw"]
+[ext_resource type="AudioStream" uid="uid://sb0g22mmndjh" path="res://assets/audio/buttonclcik.wav" id="23_6k4s4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vioj"]
 texture = ExtResource("2_l86e2")
@@ -310,9 +311,16 @@ stream = ExtResource("10_thh64")
 autoplay = true
 bus = &"Music"
 
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_6k4s4")
+
 [connection signal="button_up" from="MainMenu/Buttons/Play" to="." method="_on_play_button_up"]
+[connection signal="pressed" from="MainMenu/Buttons/Play" to="." method="_on_play_pressed"]
 [connection signal="button_up" from="MainMenu/Buttons/Credits" to="." method="_on_credits_button_up"]
+[connection signal="pressed" from="MainMenu/Buttons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="button_up" from="MainMenu/Buttons/Settings" to="." method="_on_settings_button_up"]
+[connection signal="pressed" from="MainMenu/Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="button_up" from="MainMenu/Buttons/Leave" to="." method="_on_leave_button_up"]
+[connection signal="pressed" from="MainMenu/Buttons/Leave" to="." method="_on_leave_pressed"]
 [connection signal="back_from_credits" from="Credits" to="." method="_on_credits_back_from_credits"]
 [connection signal="back_from_settings" from="Settings" to="." method="_on_settings_back_from_settings"]

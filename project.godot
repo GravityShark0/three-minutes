@@ -20,6 +20,10 @@ config/icon="res://assets/objects/energyball3.webp"
 
 buses/default_bus_layout="res://assets/default_bus_layout.tres"
 
+[autoload]
+
+ButtonClick="*res://scenes/objects/button_click.tscn"
+
 [display]
 
 window/size/viewport_width=400
@@ -111,5 +115,5 @@ burger={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
 textures/default_filters/anisotropic_filtering_level=0

@@ -30,3 +30,16 @@ func _on_settings_button_up():
 	$MainMenu.visible = false
 	$Credits.visible = false
 	$Settings.visible = true
+
+
+func _on_play_pressed():
+	ButtonClick.play()
+
+func _on_credits_pressed():
+	ButtonClick.play()
+
+func _on_settings_pressed():
+	ButtonClick.play()
+
+func _on_leave_pressed():
+	ButtonClick.play()
