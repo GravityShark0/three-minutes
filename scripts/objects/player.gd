@@ -12,7 +12,7 @@ class_name Ship
 @export var dash_speed: int = 300
 
 ## Sets the ship health
-@export var ship_health: int = 3
+@export var ship_health: float = 3
 
 var can_primary: bool = true
 var can_grenade: bool = true
@@ -21,11 +21,11 @@ var can_dash: bool = true
 var dashing: bool = false
 var dead: bool = false
 
-signal primary_fire(node: Node, pos: Vector2, direction: float)
+signal primary_fire(laser_info: Projectile)
 signal after_death
 
 
-func _process(_delta):
+func _physics_process(_delta):
 	if dead:
 		return
 	if got_hit:
@@ -37,9 +37,8 @@ func _process(_delta):
 ## These functions are meant to be called in a _process
 ## direction is a normalized vector
 func move(direction: Vector2):
-	look_at(direction + global_position)
-	$Sprites/Flame.visible = true
-	$Sprites/Flame.play("thrust")
+	$Body.rotation = direction.angle()
+	$Body/Flame.play("thrust")
 	$ShipEffects/Thrust.emitting = true
 	velocity = (direction * speed)
 
@@ -54,8 +53,8 @@ func slow_move():
 func dash(direction: Vector2):
 	can_dash = false
 	dashing = true
-	$Sprites/Flame.visible = true
-	$Sprites/Flame.play("dash")
+	$Body.rotation = direction.angle()
+	$Body/Flame.play("dash")
 	$ShipEffects/Dash.rotation = direction.angle() - rotation
 	$ShipEffects/Dash.emitting = true
 	$ShipTimers/DashLength.start()
@@ -67,11 +66,22 @@ func shoot():
 	can_primary = false
 	$ShipTimers/Primary.start()
 
-	$ShipEffects/Shoot.emitting = true
+	$GunPivot/Shoot.emitting = true
 	var ship_direction = (
 		(get_global_mouse_position() - global_position).normalized()
 	)
-	primary_fire.emit(self, $ShootPoint.global_position, ship_direction)
+	var laser = ProjectileTemplate.new()
+	laser.parent = self
+	laser.direction = ship_direction
+	laser.global_position = $GunPivot/ShootPoint.global_position
+	laser.speed = 1000
+	var damage = Damage.new()
+	damage.damage = 1
+	damage.knockback_direction = laser.direction
+	damage.knockback_strength = laser.speed / 2
+	laser.damage = damage
+	
+	primary_fire.emit(laser)
 
 
 func hit(damage: int):
@@ -89,8 +99,9 @@ func death():
 	dead = true
 	velocity = Vector2.ZERO
 	dashing = true
+	$GunPivot.queue_free()
+	$Body.queue_free()
 	$CollisionShape2D.queue_free()
-	$Sprites.queue_free()
 	$ShipEffects/Explode.emitting = true
 
 
