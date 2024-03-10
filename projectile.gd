@@ -7,13 +7,12 @@ var damage := Damage.new()
 @export var rotation_speed: int
 @export var parent: Ship
 @export var explode_particle: GPUParticles2D
+@export var base_scale = scale
 
 func _ready():
 	pass
 
-
 func _process(delta):
-	
 	if damage.damage > 0:
 		rotation_degrees += rotation_speed * delta
 		position += speed * direction * delta
@@ -24,11 +23,11 @@ func hit(taken_damage):
 
 	damage.damage -= taken_damage.damage
 	direction += damage.knockback_direction * damage.knockback_strength
-	hit_action(taken_damage.damage)
+	scale = base_scale * damage.damage
+	hit_action(taken_damage)
 
 ## hit_action is a custom action after a damage has been taken
 func hit_action(taken_damage):
-	
 	print("ive been hit for ", taken_damage.damage)
 
 func death():

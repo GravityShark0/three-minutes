@@ -23,9 +23,11 @@ position = Vector2(11, 3.8147e-06)
 position = Vector2(11, 3.59217e-06)
 
 [node name="Flame" parent="Body" index="0"]
-position = Vector2(-12, 0)
-rotation = 1.5708
-animation = &"dash"
+position = Vector2(-19, 0)
+rotation = -1.5708
+scale = Vector2(0.75, 0.75)
+animation = &"thrust"
+frame_progress = 0.0685392
 
 [node name="Nozzle" parent="Body" index="1"]
 position = Vector2(-1, 0)
